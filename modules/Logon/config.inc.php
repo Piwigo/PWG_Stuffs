@@ -8,7 +8,7 @@ $_POST['users'] = array('guest');
 if (!isset($datas)) $datas = array('0');
 
 // Enregistrement de la configuration
-if (isset($_POST['submit']) and !is_adviser()) {
+if (isset($_POST['submit'])) {
   if (!isset($_POST['remove_menubar_block'])) $_POST['remove_menubar_block']  = '0';
     $datas = array($_POST['remove_menubar_block']);
 }

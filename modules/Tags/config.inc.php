@@ -4,7 +4,7 @@ if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 if (empty($datas)) $datas = array('cloud');
 
 // Enregistrement de la configuration
-if (isset($_POST['submit']) and !is_adviser())
+if (isset($_POST['submit']))
 {
   $datas = array($_POST['tag_display']);
 }

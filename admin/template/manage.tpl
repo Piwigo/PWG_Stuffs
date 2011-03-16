@@ -1,8 +1,4 @@
-{known_script id="jquery.ui" src=$ROOT_URL|@cat:"themes/default/js/ui/packed/ui.core.packed.js" }
-{known_script id="jquery.ui.sortable" src=$ROOT_URL|@cat:"themes/default/js/ui/packed/ui.sortable.packed.js" }
-
-{html_head}
-{literal}
+{html_head}{literal}
 <style type="text/css">
 #categoryOrdering li {
   height: 60px;
@@ -18,27 +14,30 @@
   color: #ff3363;
 }
 </style>
-{/literal}
-{/html_head}
+{/literal}{/html_head}
 
-<script type="text/javascript">
-  jQuery().ready(function(){ldelim}
-    jQuery(".catPos").hide();
-    jQuery(".drag_button").show();
-    jQuery(".categoryLi").css("cursor","move");
-    jQuery(".categoryUl").sortable({ldelim}
-      axis: "y",
-      opacity: 0.8
-    });
-    jQuery("#categoryOrdering").submit(function(){ldelim}
-      ar = jQuery('.categoryUl').sortable('toArray');
-      for(i=0;i<ar.length;i++) {ldelim}
-        module = ar[i].split('module_');
-        document.getElementsByName('position[' + module[1] + ']')[0].value = i;
-      }
-    });
+{footer_script require='jquery.ui.sortable}
+
+{literal}
+jQuery().ready(function(){
+  jQuery(".catPos").hide();
+  jQuery(".drag_button").show();
+  jQuery(".categoryLi").css("cursor","move");
+  jQuery(".categoryUl").sortable({
+    axis: "y",
+    opacity: 0.8
   });
-</script>
+  jQuery("#categoryOrdering").submit(function(){
+    ar = jQuery('.categoryUl').sortable('toArray');
+    for(i=0;i<ar.length;i++) {
+      module = ar[i].split('module_');
+      document.getElementsByName('position[' + module[1] + ']')[0].value = i;
+    }
+  });
+});
+{/literal}
+
+{/footer_script}
 
 <div class="titrePage">
   <h2>PWG Stuffs</h2>
@@ -97,6 +96,6 @@
 
   <p style="text-align: center;">
   <br />
-    <input class="submit" name="submitOrder" type="submit" value="{'Save order'|@translate}" {$TAG_INPUT_ENABLED} />
+    <input class="submit" name="submitOrder" type="submit" value="{'Save order'|@translate}" />
   </p>
 </form>

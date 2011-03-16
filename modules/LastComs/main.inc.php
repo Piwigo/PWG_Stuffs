@@ -7,7 +7,7 @@ global $user, $conf;
 // |                         comments management                           |
 // +-----------------------------------------------------------------------+
 // comments deletion
-if (isset($_GET['delete']) and is_numeric($_GET['delete']) and is_admin() and !is_adviser())
+if (isset($_GET['delete']) and is_numeric($_GET['delete']) and is_admin())
 {
     check_status(ACCESS_ADMINISTRATOR);
     check_pwg_token();
@@ -19,7 +19,7 @@ DELETE FROM ' . COMMENTS_TABLE . '
 }
 
 // comments validation
-if (isset($_GET['validate']) and is_numeric($_GET['validate']) and is_admin() and !is_adviser())
+if (isset($_GET['validate']) and is_numeric($_GET['validate']) and is_admin())
 {
     check_status(ACCESS_ADMINISTRATOR);
     check_pwg_token();

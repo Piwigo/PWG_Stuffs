@@ -13,7 +13,7 @@ if (!isset($datas)) {
 }
 $available_languages = get_languages();
 // Save configuration
-if (isset($_POST['submit']) and !is_adviser()) {
+if (isset($_POST['submit'])) {
   $new_data = array();
   foreach (array_keys($available_languages) as $current_lang) {
     $quote_value_key = 'quote_config_' . $current_lang;

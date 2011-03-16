@@ -11,7 +11,7 @@ if (!isset($datas))
 }
 
 // Enregistrement de la configuration
-if (isset($_POST['submit']) and !is_adviser())
+if (isset($_POST['submit']))
 {
   $datas = array(
     'nb_images' => intval($_POST['nb_images']),

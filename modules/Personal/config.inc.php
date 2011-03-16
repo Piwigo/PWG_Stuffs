@@ -5,7 +5,7 @@ if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 if (!isset($datas)) $datas = '';
 
 // Enregistrement de la configuration
-if (isset($_POST['submit']) and !is_adviser()) {
+if (isset($_POST['submit'])) {
   $datas = stripslashes($_POST['personal_content']);
 }
 

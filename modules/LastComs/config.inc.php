@@ -4,7 +4,7 @@ if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 if (!isset($datas)) $datas = array(5, 'on', 'default', '', '');
 
 // Enregistrement de la configuration
-if (isset($_POST['submit']) and !is_adviser())
+if (isset($_POST['submit']))
 {
   if (empty($_POST['nb_comments']))
   {

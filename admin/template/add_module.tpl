@@ -1,4 +1,3 @@
-{known_script id="jquery" src=$ROOT_URL|@cat:"themes/default/js/jquery.packed.js"}
 {include file='include/autosize.inc.tpl'}
 {html_head}{literal}
 <style type="text/css">
@@ -95,5 +94,5 @@
 	{$MODULE_OPTIONS}
 </fieldset>
 {/if}
-<p><input class="submit" type="submit" value="{'Submit'|@translate}" name="submit" {$TAG_INPUT_ENABLED}/></p>
+<p><input class="submit" type="submit" value="{'Submit'|@translate}" name="submit"/></p>
 </form>

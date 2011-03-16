@@ -15,7 +15,7 @@ if ($page['tab'] == 'add_module')
 }
 
 // Save module
-if (isset($_POST['submit']) and !is_adviser())
+if (isset($_POST['submit']))
 {
   @include($module_path.'config.inc.php');
   if (empty($page['errors']))

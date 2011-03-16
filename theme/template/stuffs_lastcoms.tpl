@@ -13,22 +13,18 @@
     {/if}
     <div class="description">
       {if isset($comment.U_DELETE) or isset($comment.U_VALIDATE) }
-      <ul class="actions" style="float:right">
+      <div class="actions" style="float:right">
         {if !empty($comment.U_DELETE)}
-        <li>
-          <a href="{$comment.U_DELETE}" title="{'delete this comment'|@translate}">
+          <a href="{$comment.U_DELETE}" title="{'delete this comment'|@translate}" onClick="return confirm('{'Are you sure?'|@translate|@escape:'javascript'}');">
             <img src="{$ROOT_URL}{$themeconf.icon_dir}/delete.png" class="button" alt="[delete]" />
           </a>
-        </li>
         {/if}
         {if !empty($comment.U_VALIDATE)}
-        <li>
           <a href="{$comment.U_VALIDATE}" title="validate this comment">
             <img src="{$ROOT_URL}{$themeconf.icon_dir}/validate_s.png" class="button" alt="[validate]" />
           </a>
-        </li>
         {/if}
-      </ul>
+      </div>
       {/if}
       <span class="author">{$comment.AUTHOR}</span> - <span class="date">{$comment.DATE}</span>
       {if !empty($comment.U_EDIT)}- <a href="{$comment.U_EDIT}">{'ce_edit_tool'|@translate}</a>{/if}

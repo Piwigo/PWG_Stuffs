@@ -17,12 +17,20 @@ class stuffs
     if ($page['stuffs_section'] == 'on_picture')
     {
       $this->prefixe = 'PLUGIN_PICTURE_';
-      $template->set_prefilter('header', array('stuffs', 'prefilter_picture_css'));
+      $template->func_combine_css(array(
+        'path' => 'plugins/PWG_Stuffs/theme/stuffs_picture.css',
+        ),
+        $smarty
+      );
       pwgs_picture_special_sections();
     }
     else
     {
-      $template->set_prefilter( 'header', array('stuffs', 'prefilter_index_css') );
+      $template->func_combine_css(array(
+        'path' => 'plugins/PWG_Stuffs/theme/stuffs_index.css',
+        ),
+        $smarty
+      );
     }
 
     $this->get_user_groups();
@@ -182,47 +190,6 @@ ORDER BY pos ASC
     $block['end_line'] = true;
     $block['CLASS'] = 'middle_block';
     $this->blocks[$this->pos][] = $block;
-  }
-
-  static function prefilter_index_css($source, &$smarty)
-  {
-    $css = array(
-      '<link rel="stylesheet" type="text/css" href="{$ROOT_URL}plugins/'.STUFFS_DIR.'/theme/stuffs_index.css">'
-    );
-
-    foreach ($smarty->get_template_vars('themes') as $theme)
-    {
-      if (file_exists(PHPWG_THEMES_PATH.$theme['id'].'/stuffs_index.css'))
-      {
-        array_push($css, '<link rel="stylesheet" type="text/css" href="{$ROOT_URL}themes/'.$theme['id'].'/stuffs_index.css">');
-      }
-    }
-
-    $source = str_replace("\n</head>", "\n".implode( "\n", $css )."\n</head>", $source);
-
-    return $source;
-  }
-
-  static function prefilter_picture_css($source, &$smarty)
-  {
-    $css = array(
-      '<link rel="stylesheet" type="text/css" href="{$ROOT_URL}plugins/'.STUFFS_DIR.'/theme/stuffs_picture.css">'
-    );
-
-    foreach ($smarty->get_template_vars('themes') as $theme)
-    {
-      if (file_exists(PHPWG_THEMES_DIR.$theme['id'].'/stuffs_picture.css'))
-      {
-        array_push($css, '<link rel="stylesheet" type="text/css" href="{$ROOT_URL}themes/'.$theme['id'].'/stuffs_picture.css">');
-      }
-    }
-
-    if (!empty($css))
-    {
-      $source = str_replace("\n</head>", "\n".implode( "\n", $css )."\n</head>", $source);
-    }
-
-    return $source;
   }
 }
 

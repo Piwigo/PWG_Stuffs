@@ -8,7 +8,9 @@
       <div class="titrePage">
         {if !empty($block.U_EDIT)}
         <ul class="categoryActions">
-          <li><a href="{$block.U_EDIT}" title="{'edit'|@translate}"><img src="{$ROOT_URL}{$themeconf.icon_dir}/category_edit.png" class="button" alt="{'edit'|@translate}"/></a></li>
+          <li><a href="{$block.U_EDIT}" title="{'edit'|@translate}" class="pwg-state-default pwg-button">
+            <span class="pwg-icon pwg-icon-category-edit"> </span><span class="pwg-button-text">{'edit'|@translate}</span>
+	         	</a></li>
         </ul>
         {/if}
       {if isset($block.TITLE_URL)}

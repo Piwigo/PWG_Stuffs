@@ -10,22 +10,22 @@
   margin-bottom: 0;
 }
 
-.stuffs {
+#the_page .stuffs {
   margin: 0 0 1em;
   overflow: hidden;
 }
 
-.right_block {
+#the_page .right_block {
   float: right;
   margin: 0 0 0 1em;
 }
 
-.left_block {
+#the_page .left_block {
   float: left;
   margin: 0 1em 0 0;
 }
 
-.middle_block {
+#the_page .middle_block {
   overflow: hidden;
   margin: auto;
 }

@@ -5,14 +5,14 @@ if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 global $pwg_loaded_plugins;
 
 // Delete module
-if (isset($_GET['del']) and !is_adviser())
+if (isset($_GET['del']))
 {
   pwg_query('DELETE FROM ' . STUFFS_TABLE . ' WHERE id = ' . $_GET['del'] . ' LIMIT 1;');
   redirect(PHPWG_ROOT_PATH.'admin.php?page=plugin&section=' . STUFFS_DIR . '%2Fadmin%2Fadmin.php');
 }
 
 // Save order
-if (isset($_POST['submitOrder']) and !is_adviser())
+if (isset($_POST['submitOrder']))
 {
   asort($_POST['position'], SORT_NUMERIC);
   $pos = 1;
@@ -85,7 +85,7 @@ while ($module = mysql_fetch_assoc($result))
     'WIDTH' => $module['width'],
     'ID' => $module['id'],
     'U_EDIT' => PHPWG_ROOT_PATH . 'admin.php?page=plugin&amp;section=' . STUFFS_DIR . '%2Fadmin%2Fadmin.php&amp;tab=edit_module&amp;edit='.$module['id'],
-    'U_DELETE' => !is_adviser() ? PHPWG_ROOT_PATH . 'admin.php?page=plugin&amp;section=' . STUFFS_DIR . '%2Fadmin%2Fadmin.php&amp;del=' . $module['id'] : '',
+    'U_DELETE' => PHPWG_ROOT_PATH . 'admin.php?page=plugin&amp;section=' . STUFFS_DIR . '%2Fadmin%2Fadmin.php&amp;del=' . $module['id'],
     'MISSING' => $missing_message,
     )
   );

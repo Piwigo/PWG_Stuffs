@@ -3,7 +3,7 @@
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 
 //Ajout d'un module
-if (isset($_POST['addModule']) and !is_adviser())
+if (isset($_POST['addModule']))
 {
   if (!isset($_POST['module']))
   {
