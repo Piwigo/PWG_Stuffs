@@ -28,7 +28,7 @@ function stuffs_admin_menu($menu)
 
   array_push($menu, array(
     'NAME' => 'PWG Stuffs',
-    'URL' => get_admin_plugin_menu_link(STUFFS_PATH . 'admin/admin.php')
+    'URL' => get_root_url().'admin.php?page=plugin-'.STUFFS_DIR
     )
   );
   return $menu;

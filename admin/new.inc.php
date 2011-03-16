@@ -11,7 +11,7 @@ if (isset($_POST['addModule']))
   }
   else
   {
-    redirect(PHPWG_ROOT_PATH.'admin.php?page=plugin&section=' . STUFFS_DIR . '%2Fadmin%2Fadmin.php&tab=add_module&path=' . urlencode($_POST['module']));
+    redirect($my_base_url.'-add_module&path=' . urlencode($_POST['module']));
   }
 }
 

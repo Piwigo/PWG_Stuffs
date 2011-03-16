@@ -116,7 +116,7 @@ ORDER BY pos ASC
         }
         if (is_admin())
         {
-          $block['U_EDIT'] = PHPWG_ROOT_PATH.'admin.php?page=plugin&amp;section='.STUFFS_DIR.'%2Fadmin%2Fadmin.php&amp;tab=edit_module&amp;edit='.$module['id'].'&amp;redirect='.urlencode(urlencode($_SERVER['REQUEST_URI']));
+          $block['U_EDIT'] = get_root_url().'admin.php?page=plugin-'.STUFFS_DIR.'-edit_module&amp;edit='.$module['id'].'&amp;redirect='.urlencode(urlencode($_SERVER['REQUEST_URI']));
         }
         $this->set_tpl_block($block, $module);
       }

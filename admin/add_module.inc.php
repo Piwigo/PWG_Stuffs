@@ -92,7 +92,7 @@ VALUES (' . $next_element_id . ' ,
   NULL);';
         pwg_query($query);
       }
-      redirect(PHPWG_ROOT_PATH.'admin.php?page=plugin&section=' . STUFFS_DIR . '%2Fadmin%2Fadmin.php');
+      redirect($my_base_url);
     }
   }
 }
