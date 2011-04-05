@@ -147,7 +147,7 @@ function hide_main_block()
 
 function hide_main_block_prefilter($content, $smarty)
 {
-  return preg_replace('#<div id="content" class="content">.*</div> <!-- content -->#s', '', $content);
+  return preg_replace('#(?:<div id="content" class="content">|<div id="subcontent">).*</div>[ \{\*]*<!-- (?:sub|)content -->[ \*\}]*#si', '', $content);
 }
 
 ?>
