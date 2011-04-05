@@ -1,56 +1,55 @@
 <?php
 
-/*TODO*/$lang['stuffs_mods_management'] = 'Blocks management';
-/*TODO*/$lang['stuffs_add_mod'] = 'Add a block';
-/*TODO*/$lang['stuffs_edit_mod'] = 'Edit block';
+$lang['stuffs_mods_management'] = 'تنظيم الاطار';
+$lang['stuffs_add_mod'] = 'اضافة اطار';
+$lang['stuffs_edit_mod'] = 'تعديل اطار';
 
-/*TODO*/$lang['stuffs_module_title'] = 'Block title';
-/*TODO*/$lang['stuffs_desc'] = 'Description';
-/*TODO*/$lang['stuffs_only_for_admin'] = '(only for administration pannel)';
-/*TODO*/$lang['stuffs_type'] = 'Block type';
-/*TODO*/$lang['stuffs_position'] = 'Position';
-/*TODO*/$lang['stuffs_id_ligne'] = 'ID line';
-/*TODO*/$lang['stuffs_width'] = 'Width';
-/*TODO*/$lang['stuffs_action'] = 'Actions';
-/*TODO*/$lang['stuffs_edit'] = 'Modify block';
-/*TODO*/$lang['stuffs_delete'] = 'Delete block';
-/*TODO*/$lang['stuffs_confirm_delete'] = 'Are you sure you want to delete block %s?';
-/*TODO*/$lang['stuffs_main_block'] = 'Main block';
-/*TODO*/$lang['Hide on home page'] = 'Hide on home page';
+$lang['stuffs_module_title'] = 'عنوان الاطار';
+$lang['stuffs_desc'] = 'الوصف';
+$lang['stuffs_only_for_admin'] = '(فقط للوحة تحكم الادارة)';
+$lang['stuffs_type'] = 'نوع الاطار';
+$lang['stuffs_position'] = 'المكان';
+$lang['stuffs_id_line'] = 'رقم السطر';
+$lang['stuffs_width'] = 'العرض';
+$lang['stuffs_action'] = 'الحدث';
+$lang['stuffs_edit'] = 'تعديل الاطار';
+$lang['stuffs_delete'] = 'حذف الاطار';
+$lang['stuffs_confirm_delete'] = 'هل انت متأكد انك تريد حذف الاطار %s ?';
+$lang['stuffs_main_block'] = 'الاطار الرئيسي';
+$lang['Hide on home page'] = 'اخفاء في الصفحة الرئيسية';
 
-/*TODO*/$lang['stuffs_add_module'] = 'Add new block';
-/*TODO*/$lang['stuffs_module_config'] = 'Block configuration';
-/*TODO*/$lang['stuffs_visual_config'] = 'Display configuration';
-/*TODO*/$lang['stuffs_module_options'] = 'Block options';
-/*TODO*/$lang['stuffs_authorized_group'] = 'Authorized groups';
-/*TODO*/$lang['stuffs_authorized_users'] = 'Authorized users';
-/*TODO*/$lang['stuffs_public_module'] = '(Keep empty for public block)';
-/*TODO*/$lang['stuffs_show_title'] = 'Show block title';
-/*TODO*/$lang['stuffs_show_module_on'] = 'Show block :';
-/*TODO*/$lang['stuffs_show_on_home'] = 'On main page';
-/*TODO*/$lang['stuffs_show_on_root'] = 'On categories root page';
-/*TODO*/$lang['stuffs_show_on_cats'] = 'On all categories pages';
-/*TODO*/$lang['stuffs_show_on_picture'] = 'On picture pages';
-/*TODO*/$lang['stuffs_no_options'] = 'No options for this block';
+$lang['stuffs_add_module'] = 'اضافة اطار جديد';
+$lang['stuffs_module_config'] = 'اعدادات الاطار';
+$lang['stuffs_visual_config'] = 'اعدادات العرض';
+$lang['stuffs_module_options'] = 'خيارات الاطار';
+$lang['stuffs_authorized_group'] = 'المجموعات المخولة';
+$lang['stuffs_authorized_users'] = 'المستخدمون المخولون';
+$lang['stuffs_public_module'] = '(ابق فارغة للاطارات العامة)';
+$lang['stuffs_show_title'] = 'اظهر عنوان الاطار';
+$lang['stuffs_show_module_on'] = 'اظهر الاطار:';
+$lang['stuffs_show_on_home'] = 'في الصفحة الرئيسية';
+$lang['stuffs_show_on_root'] = 'في صفحة التصنيفات';
+$lang['stuffs_show_on_cats'] = 'في كل صفحات التصنيفات';
+$lang['stuffs_show_on_picture'] = 'في صفحة الصور';
+$lang['stuffs_no_options'] = 'لا خيارات لهذا الاطار';
 
-/*TODO*/$lang['stuffs_perm'] = 'Activate authorization management:';
-/*TODO*/$lang['stuffs_group_perm'] = 'by groups';
-/*TODO*/$lang['stuffs_user_perm'] = 'by user type';
-/*TODO*/$lang['stuffs_level_perm'] = 'by privacy level';
+$lang['stuffs_perm'] = 'تفعيل تنظيم التخويلات :';
+$lang['stuffs_group_perm'] = 'بواسطة المجموعات';
+$lang['stuffs_user_perm'] = 'بواسطة نوع المستخدم';
+$lang['stuffs_level_perm'] = 'بواسطة مستوى الخصوصية';
 
-/*TODO*/$lang['stuffs_select_all'] = 'Select all';
-/*TODO*/$lang['stuffs_unselect_all'] = 'Unselect all';
+$lang['stuffs_select_all'] = 'اختيار الكل';
+$lang['stuffs_unselect_all'] = 'ازالة اختيار الكل';
 
 // Infos messages
-/*TODO*/$lang['stuffs_order_saved'] = 'Order successfully saved.';
-/*TODO*/$lang['stuffs_upgrade_message'] = 'PWG Stuffs plugin as been renamed. It is now called "Blocks".';
+$lang['stuffs_order_saved'] = 'تم حفظ الطلب.';
+$lang['stuffs_upgrade_message'] = 'تم اعادة تسمية PWG الادوات المساعدة الى "اطار"';
 
 // Errors messages
-/*TODO*/$lang['stuffs_error_no_mod_selected'] = 'You didn\'t select any block.';
-/*TODO*/$lang['stuffs_no_name'] = 'You must specify block\'s name';
-/*TODO*/$lang['stuffs_parent_plugin_is_missing'] = 'PARENT PLUGIN IS NOT ACTIVATED. You should remove this block or re-activate parent plugin.';
-/*TODO*/$lang['stuffs_piclens_need_upgrade'] = 'PICLENS PLUGIN MUST BE UPDATED. PWG Stuffs is not compatible with this version of Piclens.';
-
+$lang['stuffs_error_no_mod_selected'] = 'لم تختر اية اطار.';
+$lang['stuffs_no_name'] = 'يجب ان تختار اسم الاطار';
+$lang['stuffs_parent_plugin_is_missing'] = 'الاداة الاب لهذه غير مفعلة.احذف هذا الاطار او فعل الاداة الاب لها.';
+$lang['stuffs_piclens_need_upgrade'] = 'اداة piclens غير محدثة . هذه الاداة غير متوافقة مع piclins الحالية';
 //------------------------------------------------------------------------------
 //                            Module LastComs
 //------------------------------------------------------------------------------
