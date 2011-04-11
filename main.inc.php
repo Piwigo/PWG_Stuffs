@@ -83,7 +83,8 @@ function stuffs_section_init()
       default: return;
   }
 
-  add_event_handler('loc_begin_page_header', 'load_stuffs');
+  add_event_handler('loc_begin_index', 'load_stuffs');
+  add_event_handler('loc_begin_picture', 'load_stuffs');
 }
 
 add_event_handler('get_admin_plugin_menu_links', 'stuffs_admin_menu');

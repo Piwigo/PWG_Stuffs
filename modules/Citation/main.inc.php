@@ -7,6 +7,6 @@ if ((isset($datas['quote_lang'][$user['language']])) and
   ("" != $datas['quote_lang'][$user['language']]))
 {
   $block['CONTENT'] = $datas['quote_lang'][$user['language']];
-  $block['TEMPLATE'] = 'stuffs_citation.tpl';
+  $block['TEMPLATE'] = 'stuffs_personal.tpl';
 }
 ?>
