@@ -1,55 +1,57 @@
 <?php
 
-/*TODO*/$lang['stuffs_mods_management'] = 'Blocks management';
-/*TODO*/$lang['stuffs_add_mod'] = 'Add a block';
-/*TODO*/$lang['stuffs_edit_mod'] = 'Edit block';
+$lang['stuffs_mods_management'] = 'Modul hantering';
+$lang['stuffs_add_mod'] = 'Lägg en modul';
+$lang['stuffs_edit_mod'] = 'Redigera modulen';
 
-/*TODO*/$lang['stuffs_module_title'] = 'Block title';
-/*TODO*/$lang['stuffs_desc'] = 'Description';
-/*TODO*/$lang['stuffs_only_for_admin'] = '(only for administration pannel)';
-/*TODO*/$lang['stuffs_type'] = 'Block type';
-/*TODO*/$lang['stuffs_position'] = 'Position';
-/*TODO*/$lang['stuffs_id_ligne'] = 'ID line';
-/*TODO*/$lang['stuffs_width'] = 'Width';
-/*TODO*/$lang['stuffs_action'] = 'Actions';
-/*TODO*/$lang['stuffs_edit'] = 'Modify block';
-/*TODO*/$lang['stuffs_delete'] = 'Delete block';
-/*TODO*/$lang['stuffs_confirm_delete'] = 'Are you sure you want to delete block %s?';
-/*TODO*/$lang['stuffs_main_block'] = 'Main block';
-/*TODO*/$lang['Hide on home page'] = 'Hide on home page';
+$lang['stuffs_module_title'] = 'Modul rubrik';
+$lang['stuffs_desc'] = 'Beskrivning';
+$lang['stuffs_only_for_admin'] = '(endast för administration menyn)';
+$lang['stuffs_type'] = 'Modul typ';
+$lang['stuffs_position'] = 'Position';
+$lang['stuffs_id_ligne'] = 'ID rad';
+$lang['stuffs_width'] = 'Bredd';
+$lang['stuffs_action'] = 'Åtgärder';
+$lang['stuffs_edit'] = 'Ändra modulen';
+$lang['stuffs_delete'] = 'ta bort modul';
+$lang['stuffs_confirm_delete'] = 'Är du säker på att du vill radera modul %s?';
+$lang['stuffs_main_block'] = 'huvudmodul';
+$lang['Hide on home page'] = 'Dölj på startsidan';
 
-/*TODO*/$lang['stuffs_add_module'] = 'Add new block';
-/*TODO*/$lang['stuffs_module_config'] = 'Block configuration';
-/*TODO*/$lang['stuffs_visual_config'] = 'Display configuration';
-/*TODO*/$lang['stuffs_module_options'] = 'Block options';
-/*TODO*/$lang['stuffs_authorized_group'] = 'Authorized groups';
-/*TODO*/$lang['stuffs_authorized_users'] = 'Authorized users';
-/*TODO*/$lang['stuffs_public_module'] = '(Keep empty for public block)';
-/*TODO*/$lang['stuffs_show_title'] = 'Show block title';
-/*TODO*/$lang['stuffs_show_module_on'] = 'Show block :';
-/*TODO*/$lang['stuffs_show_on_home'] = 'On main page';
-/*TODO*/$lang['stuffs_show_on_root'] = 'On categories root page';
-/*TODO*/$lang['stuffs_show_on_cats'] = 'On all categories pages';
-/*TODO*/$lang['stuffs_show_on_picture'] = 'On picture pages';
-/*TODO*/$lang['stuffs_no_options'] = 'No options for this block';
+$lang['stuffs_add_module'] = 'Lägg till en ny modul';
+$lang['stuffs_module_config'] = 'Modul konfiguration';
+$lang['stuffs_visual_config'] = 'Visa konfiguration';
+$lang['stuffs_module_options'] = 'Modul alternativ';
+$lang['stuffs_authorized_group'] = 'Godkända grupper';
+$lang['stuffs_authorized_users'] = 'Godkända användare';
+$lang['stuffs_public_module'] = '(Håll tom för offentliga moduler)';
+$lang['stuffs_show_title'] = 'Visa rubriken för modul';
+$lang['stuffs_show_module_on'] = 'Visa modul:';
+$lang['stuffs_show_on_home'] = 'Visa modul';
+$lang['stuffs_show_on_root'] = 'I roten på kategori sidan';
+$lang['stuffs_show_on_cats'] = 'På alla kategorier sidor';
+$lang['stuffs_show_on_picture'] = 'På bild sidorna';
+$lang['stuffs_no_options'] = 'Inga alternativ för denna modul';
 
-/*TODO*/$lang['stuffs_perm'] = 'Activate authorization management:';
-/*TODO*/$lang['stuffs_group_perm'] = 'by groups';
-/*TODO*/$lang['stuffs_user_perm'] = 'by user type';
-/*TODO*/$lang['stuffs_level_perm'] = 'by privacy level';
+$lang['stuffs_perm'] = 'Aktivera hantering för tillstånd:';
+$lang['stuffs_group_perm'] = 'av gruppe';
+$lang['stuffs_user_perm'] = 'av användartyp ';
+$lang['stuffs_level_perm'] = 'av sekretess nivå';
 
-/*TODO*/$lang['stuffs_select_all'] = 'Select all';
-/*TODO*/$lang['stuffs_unselect_all'] = 'Unselect all';
+$lang['stuffs_select_all'] = 'Markera alla';
+$lang['stuffs_unselect_all'] = 'Avmarkera alla';
 
 // Infos messages
-/*TODO*/$lang['stuffs_order_saved'] = 'Order successfully saved.';
-/*TODO*/$lang['stuffs_upgrade_message'] = 'PWG Stuffs plugin as been renamed. It is now called "Blocks".';
+$lang['stuffs_order_saved'] = 'Order sparats.';
+$lang['stuffs_upgrade_message'] = 'Blocks"PWG Stuffs plugin har bytt namn. Det kallas nu "Moduler".';
 
 // Errors messages
-/*TODO*/$lang['stuffs_error_no_mod_selected'] = 'You didn\'t select any block.';
-/*TODO*/$lang['stuffs_no_name'] = 'You must specify block\'s name';
-/*TODO*/$lang['stuffs_parent_plugin_is_missing'] = 'PARENT PLUGIN IS NOT ACTIVATED. You should remove this block or re-activate parent plugin.';
-/*TODO*/$lang['stuffs_piclens_need_upgrade'] = 'PICLENS PLUGIN MUST BE UPDATED. PWG Stuffs is not compatible with this version of Piclens.';
+$lang['stuffs_error_no_mod_selected'] = 'Du har inte valt några modul..';
+$lang['stuffs_no_name'] = 'Du måste ange modulens namn';
+$lang['stuffs_parent_plugin_is_missing'] = 'Oginal plugin är inte aktiverad. Du bör ta bort spärren eller återaktivera orginal plugin.';
+$lang['stuffs_piclens_need_upgrade'] = 'PICLENS plugin måste uppdateras. PWG Stuffs är inte kompatibel med denna version av Piclens.';
+$lang['stuffs_select_all'] = 'Select all';
+$lang['stuffs_unselect_all'] = 'Unselect all'; 
 
 //------------------------------------------------------------------------------
 //              Module LastComs
