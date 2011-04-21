@@ -90,7 +90,7 @@ $lang['personal_content'] = 'Inhalt';
 //              Module Tags
 //------------------------------------------------------------------------------
 
-$lang['module_name_tags'] = 'Tags';
+$lang['module_name_tags'] = 'Stichworte';
 $lang['module_desc_tags'] = 'Zeigt die Tags der Galerien an';
 
 $lang['stuffs_tags_default_display'] = 'Tags-Anzeige';
