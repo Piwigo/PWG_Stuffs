@@ -8,7 +8,7 @@ $lang['stuffs_module_title'] = 'Modul rubrik';
 $lang['stuffs_desc'] = 'Beskrivning';
 $lang['stuffs_only_for_admin'] = '(endast för administration menyn)';
 $lang['stuffs_type'] = 'Modul typ';
-$lang['stuffs_position'] = 'Position';
+$lang['stuffs_position'] = 'Placering';
 $lang['stuffs_id_ligne'] = 'ID rad';
 $lang['stuffs_width'] = 'Bredd';
 $lang['stuffs_action'] = 'Åtgärder';
@@ -50,8 +50,6 @@ $lang['stuffs_error_no_mod_selected'] = 'Du har inte valt några modul..';
 $lang['stuffs_no_name'] = 'Du måste ange modulens namn';
 $lang['stuffs_parent_plugin_is_missing'] = 'Oginal plugin är inte aktiverad. Du bör ta bort spärren eller återaktivera orginal plugin.';
 $lang['stuffs_piclens_need_upgrade'] = 'PICLENS plugin måste uppdateras. PWG Stuffs är inte kompatibel med denna version av Piclens.';
-$lang['stuffs_select_all'] = 'Select all';
-$lang['stuffs_unselect_all'] = 'Unselect all'; 
 
 //------------------------------------------------------------------------------
 //              Module LastComs
