@@ -12,11 +12,11 @@ $lang['stuffs_position'] = 'Posizione';
 $lang['stuffs_id_ligne'] = 'ID line';
 $lang['stuffs_width'] = 'Larghezza';
 $lang['stuffs_action'] = 'Azioni';
-$lang['stuffs_edit'] = 'Modifica del blocco';
+$lang['stuffs_edit'] = 'Modificare il blocco';
 $lang['stuffs_delete'] = 'Eliminare il blocco';
-$lang['stuffs_confirm_delete'] = 'È sicuro di voler eliminare il blocco %s?';
+$lang['stuffs_confirm_delete'] = 'Siete sicuri di voler eliminare il blocco %s?';
 $lang['stuffs_main_block'] = 'Blocco principale';
-$lang['Hide on home page'] = 'Nascondi sulla pagina iniziale';
+$lang['Hide on home page'] = 'Nascondere sulla Home';
 
 $lang['stuffs_add_module'] = 'Aggiungere un nuovo blocco';
 $lang['stuffs_module_config'] = 'Configurazione del blocco';
@@ -27,13 +27,13 @@ $lang['stuffs_authorized_users'] = 'utenti autorizzati';
 $lang['stuffs_public_module'] = '(Mantenere vuoto per un blocco pubblico)';
 $lang['stuffs_show_title'] = 'Mostrare il titolo del blocco';
 $lang['stuffs_show_module_on'] = 'Mostrare il blocco :';
-$lang['stuffs_show_on_home'] = 'Sulla pagina principale';
-$lang['stuffs_show_on_root'] = 'Alla radice delle categorie';
-$lang['stuffs_show_on_cats'] = 'Su tutte le pagine delle categorie';
+$lang['stuffs_show_on_home'] = 'Sulla pagina principale del sito';
+$lang['stuffs_show_on_root'] = 'Alla radice degli album';
+$lang['stuffs_show_on_cats'] = 'Su tutte le pagine degli album';
 $lang['stuffs_show_on_picture'] = 'Sulle pagine delle foto';
 $lang['stuffs_no_options'] = 'Nessuna opzione per questo blocco';
 
-$lang['stuffs_perm'] = 'Attivare la gestione di autorizzazione:';
+$lang['stuffs_perm'] = 'Attivare la gestione delle autorizzazioni sui moduli :';
 $lang['stuffs_group_perm'] = 'per gruppi';
 $lang['stuffs_user_perm'] = 'per tipo d\'utente';
 $lang['stuffs_level_perm'] = 'per livello privacy';
@@ -42,14 +42,14 @@ $lang['stuffs_select_all'] = 'Selezionare tutto';
 $lang['stuffs_unselect_all'] = 'Deselezionare tutto';
 
 // Infos messages
-$lang['stuffs_order_saved'] = 'Ordine salvato con successo.';
-$lang['stuffs_upgrade_message'] = 'PWG Stuffs plug-in è stato rinominato. Ora si chiama "Blocks".';
+$lang['stuffs_order_saved'] = 'Ordinamento è stato registrato';
+$lang['stuffs_upgrade_message'] = 'Il plug-in PWG Stuffs è stato rinominato. Oramai si chiama "Blocks"';
 
 // Errors messages
-$lang['stuffs_error_no_mod_selected'] = 'Non ha scelto nessun blocco.';
-$lang['stuffs_no_name'] = 'Deve specificare il nome del blocco';
-$lang['stuffs_parent_plugin_is_missing'] = 'IL PLUG-IN PARENTE NON È ATTIVO. Dovrebbe rimuovere il blocco o riattivare il plug-in parente.';
-$lang['stuffs_piclens_need_upgrade'] = 'PICLENS PLUG-IN DEVE ESSERE AGGIORNATO. PWG Stuffs non è compatibile con la versione di Piclens.';
+$lang['stuffs_error_no_mod_selected'] = 'Non avete selezionato nessun blocco da aggiungere';
+$lang['stuffs_no_name'] = 'Dovete specificare un nome per il blocco';
+$lang['stuffs_parent_plugin_is_missing'] = 'IL PLUG-IN PARENTE NON È ATTIVO. Dovete rimuovere il blocco o riattivare il plug-in parente';
+$lang['stuffs_piclens_need_upgrade'] = 'IL PLUG-IN PICLENS DEVE ESSERE AGGIORNATO. PWG Stuffs non è compatibile con la versione di Piclens';
 
 //------------------------------------------------------------------------------
 //              Module LastComs
@@ -102,17 +102,17 @@ $lang['stuffs_tags_cumulus'] = 'Usare cumulus (il plugin <a href=http://piwigo.o
 //              Module Most Visited
 //------------------------------------------------------------------------------
 
-$lang['module_name_mostvisited'] = 'I più visti';
-$lang['module_desc_mostvisited'] = 'Visualizza le x immagini le più viste della galleria o della categoria';
+$lang['module_name_mostvisited'] = 'Le più viste';
+$lang['module_desc_mostvisited'] = 'Visualizza le x foto le più viste della galleria o dell\'album';
 
-$lang['stuffs_mv_nb_images'] = 'Numero massimo d\'immagini da visualizzare';
-$lang['stuffs_mv_category_display'] = 'Visualizzazione sulle pagine delle categorie';
-$lang['stuffs_mv_all_cats'] = 'Tutte le categorie';
-$lang['stuffs_mv_w_thumb'] = 'Solo categorie con miniature';
-$lang['stuffs_mv_wo_thumb'] = 'Solo categorie senza miniature';
-$lang['stuffs_mv_selected_cats'] = 'Solo categorie selezionate';
+$lang['stuffs_mv_nb_images'] = 'Numero massimo di foto da visualizzare';
+$lang['stuffs_mv_category_display'] = 'Visualizzazione sulle pagine degli album';
+$lang['stuffs_mv_all_cats'] = 'Tutti gli album';
+$lang['stuffs_mv_w_thumb'] = 'Solo gli album con miniature';
+$lang['stuffs_mv_wo_thumb'] = 'Solo gli album senza miniature';
+$lang['stuffs_mv_selected_cats'] = 'Solo gli album selezionate';
 
-$lang['stuffs_mv_cat_selection'] = 'Selezione delle categorie';
+$lang['stuffs_mv_cat_selection'] = 'Selezione degli album';
 $lang['stuffs_mv_hold_ctrl'] = 'tenere premuto CTRL';
 
 //------------------------------------------------------------------------------
@@ -120,21 +120,21 @@ $lang['stuffs_mv_hold_ctrl'] = 'tenere premuto CTRL';
 //------------------------------------------------------------------------------
 
 $lang['module_name_bestrated'] = 'Le più votate';
-$lang['module_desc_bestrated'] = 'Visualizza le x immagini le più votate della galleria o della categoria';
+$lang['module_desc_bestrated'] = 'Visualizza le x foto le più votate della galleria o dell\'album';
 
 //------------------------------------------------------------------------------
 //              Module Recent
 //------------------------------------------------------------------------------
 
-$lang['module_name_recent'] = 'Immagini recenti';
-$lang['module_desc_recent'] = 'Visualizza le x immagini le più recenti della galleria o della categoria (se esistono)';
+$lang['module_name_recent'] = 'Foto recenti';
+$lang['module_desc_recent'] = 'Visualizza le x foto le più recenti della galleria o dell\'album (se esistono)';
 
 //------------------------------------------------------------------------------
 //              Module Random
 //------------------------------------------------------------------------------
 
-$lang['module_name_random'] = 'Immagini a caso';
-$lang['module_desc_random'] = 'Visualizza x immagini a caso della galleria o della categoria';
+$lang['module_name_random'] = 'Foto a caso';
+$lang['module_desc_random'] = 'Visualizza x foto a caso della galleria o dell\'album';
 
 //------------------------------------------------------------------------------
 //              Module Citation
@@ -149,7 +149,7 @@ $lang['module_Citation_code'] = 'Codice associato';
 //              Module Featured Photos
 //------------------------------------------------------------------------------
 
-$lang['module_name_featuredphotos'] = 'Immagine del giorno';
-$lang['module_desc_featuredphotos'] = 'Visualizza le immagini preferite del webmaster';
+$lang['module_name_featuredphotos'] = 'Foto del giorno';
+$lang['module_desc_featuredphotos'] = 'Visualizza le foto preferite del webmaster';
 
 ?>
