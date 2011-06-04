@@ -1,24 +1,23 @@
 <?php
 
-/*TODO*/$lang['stuffs_mods_management'] = 'Blocks management';
-/*TODO*/$lang['stuffs_add_mod'] = 'Add a block';
-/*TODO*/$lang['stuffs_edit_mod'] = 'Edit block';
+$lang['stuffs_mods_management'] = 'Zarządzanie blokami';
+$lang['stuffs_add_mod'] = 'Dodaj blok';
+$lang['stuffs_edit_mod'] = 'Edytuj blok';
 
-/*TODO*/$lang['stuffs_module_title'] = 'Block title';
-/*TODO*/$lang['stuffs_desc'] = 'Description';
-/*TODO*/$lang['stuffs_only_for_admin'] = '(only for administration pannel)';
-/*TODO*/$lang['stuffs_type'] = 'Block type';
-/*TODO*/$lang['stuffs_position'] = 'Position';
-/*TODO*/$lang['stuffs_id_ligne'] = 'ID line';
-/*TODO*/$lang['stuffs_width'] = 'Width';
-/*TODO*/$lang['stuffs_action'] = 'Actions';
-/*TODO*/$lang['stuffs_edit'] = 'Modify block';
-/*TODO*/$lang['stuffs_delete'] = 'Delete block';
-/*TODO*/$lang['stuffs_confirm_delete'] = 'Are you sure you want to delete block %s?';
-/*TODO*/$lang['stuffs_main_block'] = 'Main block';
-/*TODO*/$lang['Hide on home page'] = 'Hide on home page';
-
-/*TODO*/$lang['stuffs_add_module'] = 'Add new block';
+$lang['stuffs_module_title'] = 'Tytuł bloku';
+$lang['stuffs_desc'] = 'Opis';
+$lang['stuffs_only_for_admin'] = '(tylko dla panelu administracyjnego)';
+$lang['stuffs_type'] = 'Typ bloku';
+$lang['stuffs_position'] = 'Położenie';
+$lang['stuffs_id_ligne'] = 'ID linii';
+$lang['stuffs_width'] = 'Szerokość';
+$lang['stuffs_action'] = 'Akcje';
+$lang['stuffs_edit'] = 'Modyfikuj blok';
+$lang['stuffs_delete'] = 'Usuń blok';
+$lang['stuffs_confirm_delete'] = 'Na pewno chcesz usunąć blok %i?';
+$lang['stuffs_main_block'] = 'Blok główny';
+$lang['Hide on home page'] = 'Ukryj na stronie głównej';
+$lang['stuffs_add_module'] = 'Dodaj nowy blok';
 /*TODO*/$lang['stuffs_module_config'] = 'Block configuration';
 /*TODO*/$lang['stuffs_visual_config'] = 'Display configuration';
 /*TODO*/$lang['stuffs_module_options'] = 'Block options';
