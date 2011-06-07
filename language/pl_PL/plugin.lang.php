@@ -18,37 +18,37 @@ $lang['stuffs_confirm_delete'] = 'Na pewno chcesz usunąć blok %i?';
 $lang['stuffs_main_block'] = 'Blok główny';
 $lang['Hide on home page'] = 'Ukryj na stronie głównej';
 $lang['stuffs_add_module'] = 'Dodaj nowy blok';
-/*TODO*/$lang['stuffs_module_config'] = 'Block configuration';
-/*TODO*/$lang['stuffs_visual_config'] = 'Display configuration';
-/*TODO*/$lang['stuffs_module_options'] = 'Block options';
-/*TODO*/$lang['stuffs_authorized_group'] = 'Authorized groups';
-/*TODO*/$lang['stuffs_authorized_users'] = 'Authorized users';
-/*TODO*/$lang['stuffs_public_module'] = '(Keep empty for public block)';
-/*TODO*/$lang['stuffs_show_title'] = 'Show block title';
-/*TODO*/$lang['stuffs_show_module_on'] = 'Show block :';
-/*TODO*/$lang['stuffs_show_on_home'] = 'On main page';
-/*TODO*/$lang['stuffs_show_on_root'] = 'On categories root page';
-/*TODO*/$lang['stuffs_show_on_cats'] = 'On all categories pages';
-/*TODO*/$lang['stuffs_show_on_picture'] = 'On picture pages';
-/*TODO*/$lang['stuffs_no_options'] = 'No options for this block';
+$lang['stuffs_module_config'] = 'Konfiguracja bloku';
+$lang['stuffs_visual_config'] = 'Konfiguracja wyświetlania';
+$lang['stuffs_module_options'] = 'Opcje bloku';
+$lang['stuffs_authorized_group'] = 'Grupy zautoryzowane';
+$lang['stuffs_authorized_users'] = 'Użytkownicy zautoryzowani';
+$lang['stuffs_public_module'] = '(Zachowaj blok pusty dla publicznego widoku)';
+$lang['stuffs_show_title'] = 'Pokaż tytuł bloku';
+$lang['stuffs_show_module_on'] = 'Pokaż blok :';
+$lang['stuffs_show_on_home'] = 'Na głównej stronie';
+$lang['stuffs_show_on_root'] = 'Na stronie głównej kategorii';
+$lang['stuffs_show_on_cats'] = 'Na wszystkich stronach kategorii';
+$lang['stuffs_show_on_picture'] = 'Na stronach zdjęć';
+$lang['stuffs_no_options'] = 'Bez opcji dla tego bloku';
 
-/*TODO*/$lang['stuffs_perm'] = 'Activate authorization management:';
-/*TODO*/$lang['stuffs_group_perm'] = 'by groups';
-/*TODO*/$lang['stuffs_user_perm'] = 'by user type';
-/*TODO*/$lang['stuffs_level_perm'] = 'by privacy level';
+$lang['stuffs_perm'] = 'Aktywuj zarządzanie autoryzacjami:';
+$lang['stuffs_group_perm'] = 'po grupach';
+$lang['stuffs_user_perm'] = 'po typach użytkowników';
+$lang['stuffs_level_perm'] = 'po poziomach prywatności';
 
-/*TODO*/$lang['stuffs_select_all'] = 'Select all';
-/*TODO*/$lang['stuffs_unselect_all'] = 'Unselect all';
+$lang['stuffs_select_all'] = 'Zaznacz wszystko';
+$lang['stuffs_unselect_all'] = 'Odznacz wszystko';
 
 // Infos messages
-/*TODO*/$lang['stuffs_order_saved'] = 'Order successfully saved.';
-/*TODO*/$lang['stuffs_upgrade_message'] = 'PWG Stuffs plugin as been renamed. It is now called "Blocks".';
+$lang['stuffs_order_saved'] = 'Polecenie zapisano.';
+$lang['stuffs_upgrade_message'] = 'Wtyczka PWG Stuffs została przemianowana. Teraz nazywa się "Bloki".';
 
 // Errors messages
-/*TODO*/$lang['stuffs_error_no_mod_selected'] = 'You didn\'t select any block.';
-/*TODO*/$lang['stuffs_no_name'] = 'You must specify block\'s name';
-/*TODO*/$lang['stuffs_parent_plugin_is_missing'] = 'PARENT PLUGIN IS NOT ACTIVATED. You should remove this block or re-activate parent plugin.';
-/*TODO*/$lang['stuffs_piclens_need_upgrade'] = 'PICLENS PLUGIN MUST BE UPDATED. PWG Stuffs is not compatible with this version of Piclens.';
+$lang['stuffs_error_no_mod_selected'] = 'Nie wybrałeś żadnego bloku.';
+$lang['stuffs_no_name'] = 'Blok musi mieć jakąś nazwę!';
+$lang['stuffs_parent_plugin_is_missing'] = 'NADRZĘDNA WTYCZKA NIE JEST AKTYWNA. Powinieneś usunąć ten blok albo reaktywować nadrzędną wtyczkę.';
+$lang['stuffs_piclens_need_upgrade'] = 'WTYCZKA PICLENS MUSI ZOSTAĆ ZAKTUALIZOWANA. PWG Stuffs jest niekompatybilne z tą wersją Piclens.';
 
 //------------------------------------------------------------------------------
 //                            Module LastComs
@@ -72,7 +72,7 @@ $lang['lastcoms_taille_cadres'] = 'Wysokość ramki';
 //                            Module Logon
 //------------------------------------------------------------------------------
 
-$lang['module_name_logon'] = 'Login';
+$lang['module_name_logon'] = 'Zaloguj';
 $lang['module_desc_logon'] = 'Wyświetl blok logowania';
 
 $lang['logon_remove_menubar_block'] = 'Usuń blok "Szybkie połączenie" z menu';
