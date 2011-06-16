@@ -1,55 +1,55 @@
 <?php
 
-/*TODO*/$lang['stuffs_mods_management'] = 'Blocks management';
-/*TODO*/$lang['stuffs_add_mod'] = 'Add a block';
-/*TODO*/$lang['stuffs_edit_mod'] = 'Edit block';
+$lang['stuffs_mods_management'] = 'Blok yönetimi';
+$lang['stuffs_add_mod'] = 'Blok ekle';
+$lang['stuffs_edit_mod'] = 'Blok düzenle';
 
-/*TODO*/$lang['stuffs_module_title'] = 'Block title';
-/*TODO*/$lang['stuffs_desc'] = 'Description';
-/*TODO*/$lang['stuffs_only_for_admin'] = '(only for administration pannel)';
-/*TODO*/$lang['stuffs_type'] = 'Block type';
-/*TODO*/$lang['stuffs_position'] = 'Position';
-/*TODO*/$lang['stuffs_id_ligne'] = 'ID line';
-/*TODO*/$lang['stuffs_width'] = 'Width';
-/*TODO*/$lang['stuffs_action'] = 'Actions';
-/*TODO*/$lang['stuffs_edit'] = 'Modify block';
-/*TODO*/$lang['stuffs_delete'] = 'Delete block';
-/*TODO*/$lang['stuffs_confirm_delete'] = 'Are you sure you want to delete block %s?';
-/*TODO*/$lang['stuffs_main_block'] = 'Main block';
-/*TODO*/$lang['Hide on home page'] = 'Hide on home page';
+$lang['stuffs_module_title'] = 'Blok başlığı';
+$lang['stuffs_desc'] = 'Açıklama';
+$lang['stuffs_only_for_admin'] = '(sadece yönetim paneli)';
+$lang['stuffs_type'] = 'Blok türü';
+$lang['stuffs_position'] = 'Pozisyon';
+$lang['stuffs_id_ligne'] = 'Kimliği satırı';
+$lang['stuffs_width'] = 'genişlik';
+$lang['stuffs_action'] = 'Eylemler';
+$lang['stuffs_edit'] = 'blok değiştirme';
+$lang['stuffs_delete'] = 'blok sil';
+$lang['stuffs_confirm_delete'] = 'Bloğu silmek istediğinizden emin misiniz %s?';
+$lang['stuffs_main_block'] = 'Ana blok';
+$lang['Hide on home page'] = 'Anasayfada gizle';
 
-/*TODO*/$lang['stuffs_add_module'] = 'Add new block';
-/*TODO*/$lang['stuffs_module_config'] = 'Block configuration';
-/*TODO*/$lang['stuffs_visual_config'] = 'Display configuration';
-/*TODO*/$lang['stuffs_module_options'] = 'Block options';
-/*TODO*/$lang['stuffs_authorized_group'] = 'Authorized groups';
-/*TODO*/$lang['stuffs_authorized_users'] = 'Authorized users';
-/*TODO*/$lang['stuffs_public_module'] = '(Keep empty for public block)';
-/*TODO*/$lang['stuffs_show_title'] = 'Show block title';
-/*TODO*/$lang['stuffs_show_module_on'] = 'Show block :';
-/*TODO*/$lang['stuffs_show_on_home'] = 'On main page';
-/*TODO*/$lang['stuffs_show_on_root'] = 'On categories root page';
-/*TODO*/$lang['stuffs_show_on_cats'] = 'On all categories pages';
-/*TODO*/$lang['stuffs_show_on_picture'] = 'On picture pages';
-/*TODO*/$lang['stuffs_no_options'] = 'No options for this block';
+$lang['stuffs_add_module'] = 'yeni blok ekle';
+$lang['stuffs_module_config'] = 'Blok düzenlemesi';
+$lang['stuffs_visual_config'] = 'Görünüm düzenlemesi';
+$lang['stuffs_module_options'] = 'Blok seçenekleri';
+$lang['stuffs_authorized_group'] = 'yetkili gruplar';
+$lang['stuffs_authorized_users'] = 'yetkili kullanıcılar';
+$lang['stuffs_public_module'] = '(halka açık blok için boş tut)';
+$lang['stuffs_show_title'] = 'Blok başlığını göster';
+$lang['stuffs_show_module_on'] = 'Blok göster :';
+$lang['stuffs_show_on_home'] = 'Anasayfada';
+$lang['stuffs_show_on_root'] = 'Kategoriler kök sayfasında';
+$lang['stuffs_show_on_cats'] = 'Tüm kategoriler sayfalarında';
+$lang['stuffs_show_on_picture'] = 'Resim sayfalarında';
+$lang['stuffs_no_options'] = 'Bu blok için herhangi bir seçenek yok';
 
-/*TODO*/$lang['stuffs_perm'] = 'Activate authorization management:';
-/*TODO*/$lang['stuffs_group_perm'] = 'by groups';
-/*TODO*/$lang['stuffs_user_perm'] = 'by user type';
-/*TODO*/$lang['stuffs_level_perm'] = 'by privacy level';
+$lang['stuffs_perm'] = 'Yetki yönetimi etkinleştirin:';
+$lang['stuffs_group_perm'] = 'gruplarına göre';
+$lang['stuffs_user_perm'] = 'kullanıcı türüne göre';
+$lang['stuffs_level_perm'] = 'gizlilik düzeyine göre';
 
-/*TODO*/$lang['stuffs_select_all'] = 'Select all';
-/*TODO*/$lang['stuffs_unselect_all'] = 'Unselect all';
+$lang['stuffs_select_all'] = 'Tümünü seç';
+$lang['stuffs_unselect_all'] = 'Hiçbirini seçme';
 
 // Infos messages
-/*TODO*/$lang['stuffs_order_saved'] = 'Order successfully saved.';
-/*TODO*/$lang['stuffs_upgrade_message'] = 'PWG Stuffs plugin as been renamed. It is now called "Blocks".';
+$lang['stuffs_order_saved'] = 'Düzen başarıyla kaydedildi.';
+$lang['stuffs_upgrade_message'] = 'PWG Stuffs eklentisi şimdi "Blocks" olarak adlandırıldı.';
 
 // Errors messages
-/*TODO*/$lang['stuffs_error_no_mod_selected'] = 'You didn\'t select any block.';
-/*TODO*/$lang['stuffs_no_name'] = 'You must specify block\'s name';
-/*TODO*/$lang['stuffs_parent_plugin_is_missing'] = 'PARENT PLUGIN IS NOT ACTIVATED. You should remove this block or re-activate parent plugin.';
-/*TODO*/$lang['stuffs_piclens_need_upgrade'] = 'PICLENS PLUGIN MUST BE UPDATED. PWG Stuffs is not compatible with this version of Piclens.';
+$lang['stuffs_error_no_mod_selected'] = 'Bir blok seçmediniz.';
+$lang['stuffs_no_name'] = 'Bir blok adı yazmalısınız';
+$lang['stuffs_parent_plugin_is_missing'] = 'Ana eklenti etkinleştirilmedi. Bu bloğu kaldırmalısınız veya ana eklentiyi etkinleştirmelisiniz';
+$lang['stuffs_piclens_need_upgrade'] = 'PICLENS eklentisi güncelleştirilmelidir. PWG Stuffs, Piclens\'in bu sürümü ile uyumlu değil.';
 
 //------------------------------------------------------------------------------
 //                           Son Yorumlar Modülü
