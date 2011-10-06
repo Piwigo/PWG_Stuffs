@@ -1,6 +1,4 @@
-{known_script id="jquery" src=$ROOT_URL|@cat:"themes/default/js/jquery.packed.js"}
-{known_script id="jquery.ui" src=$ROOT_URL|@cat:"themes/default/js/ui/packed/ui.core.packed.js"}
-{known_script id="jquery.ui.resizable" src=$ROOT_URL|@cat:"themes/default/js/ui/packed/ui.resizable.packed.js"}
+{combine_script id="jquery.ui.resizable"}
 
 <table>
 	<tr>
