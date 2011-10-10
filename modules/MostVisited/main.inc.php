@@ -126,24 +126,21 @@ SELECT image_id, COUNT(*) AS nb_comments
       $tpl_var['NB_HITS'] = $row['hit'];
     }
 
-    if ($conf['show_thumbnail_caption'])
-    {// name of the picture
-      if (isset($row['name']) and $row['name'] != '')
-      {
-        $name = $row['name'];
-      }
-      else
-      {
-        $name = str_replace('_', ' ', get_filename_wo_extension($row['file']));
-      }
-
-      if ( !$user['show_nb_hits'])
-      {
-        $name = '('.$row['hit'].') '.$name;
-      }
-
-      $tpl_var['NAME'] = $name;
+    if (isset($row['name']) and $row['name'] != '')
+    {
+      $name = $row['name'];
     }
+    else
+    {
+      $name = str_replace('_', ' ', get_filename_wo_extension($row['file']));
+    }
+
+    if ( !$user['show_nb_hits'])
+    {
+      $name = '('.$row['hit'].') '.$name;
+    }
+
+    $tpl_var['NAME'] = $name;
 
     if ( isset($nb_comments_of) )
     {

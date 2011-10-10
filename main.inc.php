@@ -36,13 +36,14 @@ function stuffs_admin_menu($menu)
 
 function load_stuffs()
 {
-  global $template;
+  global $template, $conf;
 
   include(STUFFS_PATH . 'class.inc.php');
   include(STUFFS_PATH . 'functions.inc.php');
 
   $template->set_template_dir(STUFFS_PATH.'theme/template/');
   $template->set_filename('stuffs', 'stuffs_blocks.tpl');
+  $template->assign('SHOW_THUMBNAIL_CAPTION', $conf['show_thumbnail_caption']);
 
   $stuffs = new stuffs();
 

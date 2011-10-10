@@ -23,12 +23,12 @@ $forbidden = get_sql_condition_FandF
     'AND'
   );
 
-$query ='
+$query = '
 SELECT DISTINCT(i.id)
   FROM '.IMAGES_TABLE.' AS i
     INNER JOIN '.IMAGE_CATEGORY_TABLE.' AS ic ON i.id = ic.image_id
     INNER JOIN '.CATEGORIES_TABLE.' AS c ON ic.category_id = c.id
-  WHERE i.average_rate IS NOT NULL';
+  WHERE i.rating_score IS NOT NULL';
 
 if (isset($page['category']))
 {
@@ -39,9 +39,9 @@ if (isset($page['category']))
 
 $query .= '
       '.$forbidden.'
-      ORDER BY i.average_rate DESC, i.id ASC
-    LIMIT 0, '.$datas['nb_images'].'
-  ;';
+  ORDER BY i.rating_score DESC, i.id DESC
+  LIMIT 0, '.$datas['nb_images'].'
+;';
 
 $pictures = array();
 $selection = array_from_query($query, 'id');
@@ -126,19 +126,16 @@ SELECT image_id, COUNT(*) AS nb_comments
       $tpl_var['NB_HITS'] = $row['hit'];
     }
 
-    if ($conf['show_thumbnail_caption'])
-    {// name of the picture
-      if (isset($row['name']) and $row['name'] != '')
-      {
-        $name = $row['name'];
-      }
-      else
-      {
-        $name = str_replace('_', ' ', get_filename_wo_extension($row['file']));
-      }
-
-      $tpl_var['NAME'] = '('.$row['average_rate'].') '.$name;
+    if (isset($row['name']) and $row['name'] != '')
+    {
+      $name = $row['name'];
     }
+    else
+    {
+      $name = str_replace('_', ' ', get_filename_wo_extension($row['file']));
+    }
+
+    $tpl_var['NAME'] = '('.$row['rating_score'].') '.$name;
 
     if ( isset($nb_comments_of) )
     {
