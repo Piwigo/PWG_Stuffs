@@ -40,7 +40,7 @@ if (isset($page['category']))
 
 $query .= '
     '.$forbidden.'
-    ORDER BY i.id DESC
+    ORDER BY  date_available DESC, i.id DESC
     LIMIT 0, '.$datas['nb_images'].'
   ;';
 
@@ -53,7 +53,7 @@ if (count($selection) > 0)
 SELECT *
   FROM '.IMAGES_TABLE.'
   WHERE id IN ('.implode(',', $selection).')
-  ORDER BY id DESC
+  ORDER BY  date_available DESC, id DESC
 ;';
   $result = pwg_query($query);
   while ($row = mysql_fetch_assoc($result))
