@@ -50,7 +50,7 @@ $query .= '
 $page['items'] = array_from_query($query, 'id');
 $page['start'] = 0;
 $page['nb_image_page'] = $datas['nb_images'];
-$page['section'] = 'best_rated';
+$page['section'] = 'category';
 
 include(PHPWG_ROOT_PATH.'include/category_default.inc.php');
 
