@@ -31,19 +31,17 @@
 </table>
 
 {elseif $display_mode == 'cumulus'}
-<div id="flashcontent">This will be shown to users with no Flash or Javascript.</div>
-
-  <script type="text/javascript">
-    var so = new SWFObject("{$PWG_CUMULUS_SWF}/tagcloud.swf", "tagcloud", "100%", "{$PWG_CUMULUS_HEIGHT}", "7", "#FFFFFF");
-    so.addParam("wmode", "transparent");
-    so.addVariable("tcolor", "{$PWG_CUMULUS_COLOR1}");
-    so.addVariable("tcolor2", "{$PWG_CUMULUS_COLOR2}");
-    so.addVariable("hicolor", "{$PWG_CUMULUS_HICOLOR}");
-    so.addVariable("mode", "tags");
-    so.addVariable("distr", "true");
-    so.addVariable("tspeed", "100");
-    so.addVariable("tagcloud", 
-    "<tags>{foreach from=$tags item=tag}<a href='{$tag.URL}' style='{$tag.size}pt'>{$tag.display_name}</a>{/foreach}</tags>");
-    so.write("flashcontent");
-  </script>
+<div style="text-align:center;">
+<object data="{$PWG_CUMULUS_SWF}/tagcloud.swf" width="{$PWG_CUMULUS_WIDTH}" height="{$PWG_CUMULUS_HEIGHT}" type="application/x-shockwave-flash">
+    <param name="movie" value="{$PWG_CUMULUS_SWF}/tagcloud.swf">
+    <param name="allowScriptAccess" value="sameDomain">
+    <param name="quality" value="high">
+    {if ($PWG_CUMULUS_MODE_TRANSPARENT)}
+    <param name="wmode" value="transparent">
+    {else}
+    <param name="bgcolor" value="#{$PWG_CUMULUS_BGCOLOR}">
+    {/if}
+    <param name="flashvars" value="mode=tags&tcolor={$PWG_CUMULUS_COLOR1}&tcolor2={$PWG_CUMULUS_COLOR2}&hicolor={$PWG_CUMULUS_HICOLOR}&tspeed=100&distr=true&tagcloud=<tags>{foreach from=$tags item=tag}<a href='{$tag.URL}' style='{$tag.size}pt'>{$tag.display_name}</a>{/foreach}</tags>">
+  </object>
+</div>
 {/if}
