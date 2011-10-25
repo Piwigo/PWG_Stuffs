@@ -1,81 +1,161 @@
 <?php
 
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
+include_once(PHPWG_ROOT_PATH.'include/functions_comment.inc.php');
+
 global $user, $conf;
 
 // +-----------------------------------------------------------------------+
 // |                         comments management                           |
 // +-----------------------------------------------------------------------+
-// comments deletion
-if (isset($_GET['delete']) and is_numeric($_GET['delete']) and is_admin())
+
+$comment_id = null;
+$action = null;
+
+$actions = array('delete_comment', 'validate_comment', 'edit_comment');
+foreach ($actions as $loop_action)
 {
-    check_status(ACCESS_ADMINISTRATOR);
-    check_pwg_token();
-    $query = '
-DELETE FROM ' . COMMENTS_TABLE . '
-  WHERE id=' . $_GET['delete'] . '
-;';
-    pwg_query($query);
+  if (isset($_GET[$loop_action]))
+  {
+    $action = $loop_action;
+    check_input_parameter($action, $_GET, false, PATTERN_ID);
+    $comment_id = $_GET[$action];
+    break;
+  }
 }
 
-// comments validation
-if (isset($_GET['validate']) and is_numeric($_GET['validate']) and is_admin())
+if (isset($action))
 {
-    check_status(ACCESS_ADMINISTRATOR);
-    check_pwg_token();
-    $query = '
-UPDATE ' . COMMENTS_TABLE . '
-  SET validated = \'true\'
-  , validation_date = NOW()
-  WHERE id=' . $_GET['validate'] . '
-;';
-    pwg_query($query);
+  check_pwg_token();
+
+  $comment_author_id = get_comment_author_id($comment_id);
+  $action = str_replace('_comment', '', $action);
+
+  if (can_manage_comment($action, $comment_author_id))
+  {
+    $perform_redirect = false;
+
+    if ('delete' == $action)
+    {
+      delete_user_comment($comment_id);
+      $perform_redirect = true;
+    }
+
+    if ('validate' == $action)
+    {
+      validate_user_comment($comment_id);
+      $perform_redirect = true;
+    }
+
+    if ('edit' == $action)
+    {
+      if (!empty($_POST['content']))
+      {
+        update_user_comment(
+          array(
+            'comment_id' => $_GET['edit_comment'],
+            'image_id' => $_POST['image_id'],
+            'content' => $_POST['content']
+            ),
+          $_POST['key']
+          );
+
+        $perform_redirect = true;
+      }
+      else
+      {
+        $edit_comment = $_GET['edit_comment'];
+      }
+    }
+
+    if ($perform_redirect)
+    {
+      $redirect_url =
+        PHPWG_ROOT_PATH
+        .'index.php'
+        .get_query_string_diff(array('delete_comment','validate_comment','edit_comment','pwg_token'));
+
+      redirect($redirect_url);
+    }
+  }
 }
 
 // +-----------------------------------------------------------------------+
 // |                        last comments display                          |
 // +-----------------------------------------------------------------------+
+if ( !is_admin() )
+{
+  $page['where_clauses'][] = 'validated=\'true\'';
+}
+
+$page['where_clauses'][] = get_sql_condition_FandF
+  (
+    array
+      (
+        'forbidden_categories' => 'category_id',
+        'visible_categories' => 'category_id',
+        'visible_images' => 'ic.image_id'
+      ),
+    '', true
+  );
+
 $comments = array();
 $element_ids = array();
 $category_ids = array();
-$max_width = 0;
-if (!is_admin())
-{
-  $clauses[] = 'validated="true"';
-}
-$clauses[] = get_sql_condition_FandF (
-    array ('forbidden_categories' => 'category_id',
-        'visible_categories' => 'category_id',
-        'visible_images' => 'ic.image_id'), '', true);
 
-$query = 'SELECT com.id AS comment_id
-   , com.image_id
-   , ic.category_id
-   , com.author
-   , com.date
-   , com.content
-   , com.id AS comment_id
-   , com.validated
-   FROM ' . IMAGE_CATEGORY_TABLE . ' AS ic
-   INNER JOIN ' . COMMENTS_TABLE . ' AS com
-   ON ic.image_id = com.image_id
-   WHERE ' . implode(' AND ', $clauses) . '
-    GROUP BY comment_id
-    ORDER BY date DESC
-    LIMIT 0, ' . $datas[0] . ';';
+$query = '
+SELECT com.id AS comment_id,
+       com.image_id,
+       com.author,
+       com.author_id,
+       com.date,
+       com.content,
+       com.validated
+  FROM '.IMAGE_CATEGORY_TABLE.' AS ic
+    INNER JOIN '.COMMENTS_TABLE.' AS com
+    ON ic.image_id = com.image_id
+    LEFT JOIN '.USERS_TABLE.' As u
+    ON u.'.$conf['user_fields']['id'].' = com.author_id
+  WHERE '.implode('
+    AND ', $page['where_clauses']).'
+  GROUP BY comment_id,
+       com.image_id,
+       com.author,
+       com.author_id,
+       com.date,
+       com.content,
+       com.validated
+  ORDER BY date DESC
+  LIMIT 0, ' . $datas[0] . ';';
 
+$query.= '
+;';
 $result = pwg_query($query);
-while ($row = mysql_fetch_assoc($result))
+while ($row = pwg_db_fetch_assoc($result))
 {
   array_push($comments, $row);
   array_push($element_ids, $row['image_id']);
-  array_push($category_ids, $row['category_id']);
 }
 
 if (count($comments) > 0)
 {
+  $block['TEMPLATE'] = 'stuffs_lastcoms.tpl';
   $block['TITLE_URL'] = 'comments.php';
   $block['comments'] = array();
+  $block['MAX_WIDTH'] = $datas[3];
+  $block['MAX_HEIGHT'] = $datas[4];
+  switch ($datas[2])
+  {
+    case 1 :
+      $block['NB_COMMENTS_LINE'] = '99%';
+      break;
+    case 2 :
+      $block['NB_COMMENTS_LINE'] = '49.5%';
+      break;
+    case 3 :
+      $block['NB_COMMENTS_LINE'] = '33%';
+      break;
+  }
 
   // retrieving element informations
   $elements = array();
@@ -85,18 +165,30 @@ SELECT id, name, file, path, tn_ext
   WHERE id IN ('.implode(',', $element_ids).')
 ;';
   $result = pwg_query($query);
-  while ($row = mysql_fetch_assoc($result))
+  while ($row = pwg_db_fetch_assoc($result))
   {
     $elements[$row['id']] = $row;
   }
 
   // retrieving category informations
   $query = '
-SELECT id, name, permalink, uppercats
-  FROM '.CATEGORIES_TABLE.'
-  WHERE id IN ('.implode(',', $category_ids).')
+SELECT c.id, name, permalink, uppercats, com.id as comment_id
+  FROM '.CATEGORIES_TABLE.' AS c
+  LEFT JOIN '.IMAGE_CATEGORY_TABLE.' AS ic
+  ON c.id=ic.category_id
+  LEFT JOIN '.COMMENTS_TABLE.' AS com
+  ON ic.image_id=com.image_id
+  '.get_sql_condition_FandF
+    (
+      array
+      (
+	'forbidden_categories' => 'c.id',
+	'visible_categories' => 'c.id'
+       ),
+      'WHERE'
+     ).'
 ;';
-  $categories = hash_from_query($query, 'id');
+  $categories = hash_from_query($query, 'comment_id');
 
   foreach ($comments as $comment)
   {
@@ -114,71 +206,81 @@ SELECT id, name, permalink, uppercats
 
     // link to the full size picture
     $url = make_picture_url(
-            array(
-              'category' => $categories[ $comment['category_id'] ],
-              'image_id' => $comment['image_id'],
-              'image_file' => $elements[$comment['image_id']]['file'],
-            )
-          );
+      array(
+        'category' => $categories[ $comment['comment_id'] ],
+        'image_id' => $comment['image_id'],
+        'image_file' => $elements[$comment['image_id']]['file'],
+        )
+      );
 
-    $author = $comment['author'];
-    if (empty($comment['author']))
+    $tpl_comment = array(
+      'ID' => $comment['comment_id'],
+      'U_PICTURE' => $url,
+      'TN_SRC' => $thumbnail_src,
+      'ALT' => $name,
+      'AUTHOR' => trigger_event('render_comment_author', $comment['author']),
+      'DATE'=>format_date($comment['date'], true),
+      'CONTENT'=>trigger_event('render_comment_content',$comment['content']),
+      'WIDTH' => $datas[3],
+      'HEIGHT' => $datas[4],
+      );
+
+    if (can_manage_comment('delete', $comment['author_id']))
     {
-      $author = l10n('guest');
+      $url =
+        get_root_url()
+        .'index.php'
+        .get_query_string_diff(array('edit_comment', 'delete_comment','validate_comment', 'pwg_token'));
+
+      $tpl_comment['U_DELETE'] = add_url_params(
+        $url,
+        array(
+          'delete_comment' => $comment['comment_id'],
+          'pwg_token' => get_pwg_token(),
+          )
+        );
     }
 
-    $tpl_comment =
-      array(
-        'U_PICTURE' => $url,
-        'TN_SRC' => $thumbnail_src,
-        'ALT' => $name,
-        'AUTHOR' => trigger_event('render_comment_author', $author),
-        'DATE' => format_date($comment['date'],'mysql_datetime',true),
-        'CONTENT' => trigger_event('render_comment_content',$comment['content']),
-        'WIDTH' => $datas[3],
-        'HEIGHT' => $datas[4],
+    if (can_manage_comment('edit', $comment['author_id']))
+    {
+      $url =
+        get_root_url()
+        .'index.php'
+	.get_query_string_diff(array('edit_comment', 'delete_comment','validate_comment', 'pwg_token'));
+
+      $tpl_comment['U_EDIT'] = add_url_params(
+        $url,
+        array(
+          'edit_comment' => $comment['comment_id'],
+          'pwg_token' => get_pwg_token(),
+          )
         );
 
-    switch ($datas[2])
-    {
-      case 1 :
-        $tpl_comment['CLASS'] = 'one_comment';
-        break;
-      case 2 :
-        $tpl_comment['CLASS'] = 'two_comment';
-        break;
-      case 3 :
-        $tpl_comment['CLASS'] = 'three_comment';
-        break;
-    }
-
-    if ( is_admin() )
-    {
-      $url = get_root_url().'index.php'.get_query_string_diff(array('delete','validate'));
-      $tpl_comment['U_DELETE'] = add_url_params($url, array(
-            'delete' => $comment['comment_id'],
-            'pwg_token' => get_pwg_token()));
-
-            if ($comment['validated'] != 'true')
+      if (isset($edit_comment) and ($comment['comment_id'] == $edit_comment))
       {
-        $tpl_comment['U_VALIDATE'] = add_url_params($url, array(
-            'validate' => $comment['comment_id'],
-            'pwg_token' => get_pwg_token()));
+        $tpl_comment['IN_EDIT'] = true;
+        $key = get_ephemeral_key(2, $comment['image_id']);
+        $tpl_comment['KEY'] = $key;
+        $tpl_comment['IMAGE_ID'] = $comment['image_id'];
+        $tpl_comment['CONTENT'] = $comment['content'];
       }
     }
 
-    // Show comment editor link
-    if (defined('CE_PATH') and ((!is_a_guest() and ($user[$conf['user_fields']['username']] == $author)) or is_admin()))
+    if (can_manage_comment('validate', $comment['author_id']))
     {
-      load_language('plugin.lang', CE_PATH);
-      $tpl_comment['U_EDIT'] = add_url_params(get_root_url() . 'index.php', array(
-            CE_ACTION => CE_ACTION_EDIT,
-            CE_ID => $comment['comment_id'],
-            'pwg_token' => get_pwg_token()));
+      if ('true' != $comment['validated'])
+      {
+        $tpl_comment['U_VALIDATE'] = add_url_params(
+          $url,
+          array(
+            'validate_comment'=> $comment['comment_id'],
+            'pwg_token' => get_pwg_token(),
+            )
+          );
+      }
     }
     array_push($block['comments'], $tpl_comment);
   }
-  $block['TEMPLATE'] = 'stuffs_lastcoms.tpl';
 }
 
 ?>
