@@ -75,7 +75,7 @@ if (isset($action))
         .'index.php'
         .get_query_string_diff(array('delete_comment','validate_comment','edit_comment','pwg_token'));
 
-      redirect($redirect_url);
+      redirect(rtrim($redirect_url, '='));
     }
   }
 }

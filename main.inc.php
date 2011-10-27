@@ -70,7 +70,8 @@ function stuffs_section_init()
       break;
 
     case 'index':
-      if (count($tokens) == 1 and empty($tokens[0]))
+      $actions = array('delete_comment', 'validate_comment', 'edit_comment', '');
+      if (count($tokens) == 1 and in_array($tokens[0], $actions))
       {
         $page['stuffs_section'] = 'on_home';
         break;
