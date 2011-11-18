@@ -33,9 +33,13 @@
 
   <p>
     {if isset($block.U_REGISTER) }
-    <a href="{$block.U_REGISTER}" title="{'Create a new account'|@translate}"><img src="{$ROOT_URL}{$themeconf.icon_dir}/register.png" class="button" alt="{'Register'|@translate}"> {'Register'|@translate}</a>
+    <a href="{$block.U_REGISTER}" title="{'Register'|@translate}" class="pwg-state-default pwg-button">
+      <span class="pwg-icon pwg-icon-register">&nbsp;</span><span>{'Register'|@translate}</span>
+    </a>
     {/if}
-    <a href="{$block.U_LOST_PASSWORD}" title="{'Forgot your password?'|@translate}"><img src="{$ROOT_URL}{$themeconf.icon_dir}/lost_password.png" class="button" alt="{'Forgot your password?'|@translate}"> {'Forgot your password?'|@translate}</a>
+    <a href="{$block.U_LOST_PASSWORD}" title="{'Forgot your password?'|@translate}" class="pwg-state-default pwg-button">
+      <span class="pwg-icon pwg-icon-lost-password">&nbsp;</span><span>{'Forgot your password?'|@translate}</span>
+    </a>
   </p>
 
 </form>
