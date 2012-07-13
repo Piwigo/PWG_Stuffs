@@ -50,11 +50,14 @@ $page['start'] = 0;
 $page['nb_image_page'] = $datas['nb_images'];
 $page['section'] = 'category';
 
+$tpl_thumbnails_var = array();
+$pwg_stuffs_tpl_thumbnails_var = & $tpl_thumbnails_var;
 include(PHPWG_ROOT_PATH.'include/category_default.inc.php');
 
-if (!empty($tpl_thumbnails_var))
+if (!empty($pwg_stuffs_tpl_thumbnails_var))
 {
-  $block['thumbnails'] = $tpl_thumbnails_var;
+  $block['thumbnails'] = $pwg_stuffs_tpl_thumbnails_var;
+  $block['derivative_params'] = ImageStdParams::get_by_type(IMG_THUMB);
   $block['TEMPLATE'] = 'stuffs_thumbnails.tpl';
 }
 
