@@ -2,9 +2,10 @@
 
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 
-global $page, $user, $conf;
+global $page, $user, $conf, $template;
 
 $page_save = $page;
+$tpl_save = $template->get_template_vars('THUMBNAILS');
 
 $forbidden = get_sql_condition_FandF
   (
@@ -43,5 +44,6 @@ if (!empty($pwg_stuffs_tpl_thumbnails_var))
 }
 
 $page = $page_save;
+$template->assign('THUMBNAILS', $tpl_save);
 
 ?>

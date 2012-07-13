@@ -160,7 +160,7 @@ if (count($comments) > 0)
   // retrieving element informations
   $elements = array();
   $query = '
-SELECT id, name, file, path, tn_ext
+SELECT *
   FROM '.IMAGES_TABLE.'
   WHERE id IN ('.implode(',', $element_ids).')
 ;';
@@ -202,7 +202,7 @@ SELECT c.id, name, permalink, uppercats, com.id as comment_id
     }
 
     // source of the thumbnail picture
-    $thumbnail_src = get_thumbnail_url( $elements[$comment['image_id']] );
+    $src_image = new SrcImage($elements[$comment['image_id']]);
 
     // link to the full size picture
     $url = make_picture_url(
@@ -216,7 +216,7 @@ SELECT c.id, name, permalink, uppercats, com.id as comment_id
     $tpl_comment = array(
       'ID' => $comment['comment_id'],
       'U_PICTURE' => $url,
-      'TN_SRC' => $thumbnail_src,
+      'src_image' => $src_image,
       'ALT' => $name,
       'AUTHOR' => trigger_event('render_comment_author', $comment['author']),
       'DATE'=>format_date($comment['date'], true),
@@ -281,6 +281,7 @@ SELECT c.id, name, permalink, uppercats, com.id as comment_id
     }
     array_push($block['comments'], $tpl_comment);
   }
+  $block['derivative_params'] = ImageStdParams::get_by_type(IMG_THUMB);
 }
 
 ?>
