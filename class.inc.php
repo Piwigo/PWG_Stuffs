@@ -105,7 +105,7 @@ ORDER BY pos ASC
       $datas = (!empty($module['datas']) ? unserialize($module['datas']) : false);
       $block = array();
 
-      @include($module['path'].'main.inc.php');
+      include($module['path'].'main.inc.php');
 
       if (!empty($block['TEMPLATE']))
       {

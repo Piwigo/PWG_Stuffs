@@ -142,11 +142,6 @@ else
 
 $template->assign('display_mode', $datas[0]);
 
-if (get_db_plugins('active','typetags'))
-{
-  include(typetags_PATH . 'typetags.php');
-}
-
 $block['TEMPLATE'] = 'stuffs_tags.tpl';
 
 ?>
