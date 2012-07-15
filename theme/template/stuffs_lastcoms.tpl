@@ -16,6 +16,6 @@
 
 <div id="comments">
 {assign var=comments value=$block.comments}
-{assign var='comment_derivative_params' value=$block.derivative_params}
+{assign var='derivative_params' value=$block.derivative_params}
 {include file='comment_list.tpl'}
 </div>
