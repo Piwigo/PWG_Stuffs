@@ -19,8 +19,7 @@ class stuffs
       $this->prefixe = 'PLUGIN_PICTURE_';
       $template->func_combine_css(array(
         'path' => 'plugins/PWG_Stuffs/theme/stuffs_picture.css',
-        ),
-        $smarty
+        )
       );
       pwgs_picture_special_sections();
     }
@@ -28,8 +27,7 @@ class stuffs
     {
       $template->func_combine_css(array(
         'path' => 'plugins/PWG_Stuffs/theme/stuffs_index.css',
-        ),
-        $smarty
+        )
       );
     }
 
