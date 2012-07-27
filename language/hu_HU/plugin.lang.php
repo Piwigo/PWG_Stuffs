@@ -28,8 +28,8 @@ $lang['stuffs_public_module'] = '(A publikus modulok legyenek üresek)';
 $lang['stuffs_show_title'] = 'Mutassa a modul címét';
 $lang['stuffs_show_module_on'] = 'Modul megjelenés :';
 $lang['stuffs_show_on_home'] = 'Fő oldalon';
-$lang['stuffs_show_on_root'] = 'Gyökér kategóriákban';
-$lang['stuffs_show_on_cats'] = 'Minden kategória oldalon';
+$lang['stuffs_show_on_root'] = 'Gyökér albumban';
+$lang['stuffs_show_on_cats'] = 'Minden album oldalon';
 $lang['stuffs_show_on_picture'] = 'Kép oldalakon';
 $lang['stuffs_no_options'] = 'A modulhoz nincs egyéb beállítási lehetőség';
 
@@ -103,16 +103,16 @@ $lang['stuffs_tags_cumulus'] = 'Használja a gomolyfelhő módot (telepíteni ke
 //------------------------------------------------------------------------------
 
 $lang['module_name_mostvisited'] = 'Legtöbbször nézett';
-$lang['module_desc_mostvisited'] = 'Jelenjenek meg a legtöbbször nézett kategóriák vagy képek';
+$lang['module_desc_mostvisited'] = 'Jelenjenek meg a legtöbbször nézett albumok vagy képek';
 
 $lang['stuffs_mv_nb_images'] = 'Legfeljebb ennyi kép';
-$lang['stuffs_mv_category_display'] = 'Jelenjen meg a kategóriák oldalain';
-$lang['stuffs_mv_all_cats'] = 'Minden kategória';
-$lang['stuffs_mv_w_thumb'] = 'Csak kategóriák bélyegképpel';
-$lang['stuffs_mv_wo_thumb'] = 'Csak kategóriák bélyegkép nélkül';
-$lang['stuffs_mv_selected_cats'] = 'Csak a kiválasztott kategóriák';
+$lang['stuffs_mv_category_display'] = 'Jelenjen meg az albumok oldalain';
+$lang['stuffs_mv_all_cats'] = 'Minden album';
+$lang['stuffs_mv_w_thumb'] = 'Csak albumok bélyegképpel';
+$lang['stuffs_mv_wo_thumb'] = 'Csak albumok bélyegkép nélkül';
+$lang['stuffs_mv_selected_cats'] = 'Csak a kiválasztott albumok';
 
-$lang['stuffs_mv_cat_selection'] = 'Kategóriák kiválasztása';
+$lang['stuffs_mv_cat_selection'] = 'Albumok kiválasztása';
 $lang['stuffs_mv_hold_ctrl'] = 'tartsa lenyomva a CTRL-t';
 
 //------------------------------------------------------------------------------
@@ -120,21 +120,21 @@ $lang['stuffs_mv_hold_ctrl'] = 'tartsa lenyomva a CTRL-t';
 //------------------------------------------------------------------------------
 
 $lang['module_name_bestrated'] = 'Legjobbra értékelt';
-$lang['module_desc_bestrated'] = 'Jelenjenek meg a legjobbra értékelt kategóriák vagy képek';
+$lang['module_desc_bestrated'] = 'Jelenjenek meg a legjobbra értékelt albumok vagy képek';
 
 //------------------------------------------------------------------------------
 //              Module Recent
 //------------------------------------------------------------------------------
 
 $lang['module_name_recent'] = 'Legfrissebb képek';
-$lang['module_desc_recent'] = 'Jelenjenek meg a legfrissebb kategóriák vagy képek (ha vannak)';
+$lang['module_desc_recent'] = 'Jelenjenek meg a legfrissebb albumok vagy képek (ha vannak)';
 
 //------------------------------------------------------------------------------
 //              Module Random
 //------------------------------------------------------------------------------
 
 $lang['module_name_random'] = 'Véletlenszerű képek';
-$lang['module_desc_random'] = 'Jelenjenek meg a véletlenszerű kategóriák vagy képek';
+$lang['module_desc_random'] = 'Jelenjenek meg a véletlenszerű albumok vagy képek';
 
 //------------------------------------------------------------------------------
 //              Module Citation
