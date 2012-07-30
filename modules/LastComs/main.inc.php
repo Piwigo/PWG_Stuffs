@@ -150,10 +150,10 @@ if (count($comments) > 0)
       $block['NB_COMMENTS_LINE'] = '99%';
       break;
     case 2 :
-      $block['NB_COMMENTS_LINE'] = '49.5%';
+      $block['NB_COMMENTS_LINE'] = '49%';
       break;
     case 3 :
-      $block['NB_COMMENTS_LINE'] = '33%';
+      $block['NB_COMMENTS_LINE'] = '32.4%';
       break;
   }
 

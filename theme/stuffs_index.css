@@ -44,11 +44,11 @@
 }
 
 .two_comment {
-  width: 49.5% !important;
+  width: 49% !important;
 }
 
 .three_comment {
-  width: 33% !important;
+  width: 32.4% !important;
 }
 
 #comments div.thumbnailCategory div.illustration {
@@ -58,6 +58,10 @@
 
 #comments div.thumbnailCategory blockquote {
   margin-left: 10px;
+}
+
+.stuffs .commentElement {
+  margin: 0.3%;
 }
 
 /* Hack IE6 */

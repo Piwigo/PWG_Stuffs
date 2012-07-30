@@ -97,7 +97,7 @@ function add_pwgs_url_params()
 {
   global $page, $template;
 
-  $param = $page['PWG_Stuffs_section'];
+  $param = $page['stuffs_section'];
 
   $urls = array(
     'first.U_IMG',
@@ -147,7 +147,7 @@ function hide_main_block()
 
 function hide_main_block_prefilter($content, $smarty)
 {
-  return preg_replace('#(?:<div id="content" class="content">|<div id="subcontent">).*</div>[ \{\*]*<!-- (?:sub|)content -->[ \*\}]*#si', '', $content);
+  return preg_replace('#(?:<div id="content"|<div id="subcontent").*</div>[ \{\*]*<!-- (?:sub|)content -->[ \*\}]*#si', '', $content);
 }
 
 ?>
