@@ -1,4 +1,4 @@
-<div class="content stuffs_block">
+<div class="content contentWithMenu stuffs_block">
 {foreach from=$blocks item=block key=key}
   {if $block.new_line}
   <div class="content stuffs_block stuffs">
