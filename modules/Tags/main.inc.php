@@ -132,7 +132,7 @@ else
         )
       );
   }
-  if ($datas[0] == 'cumulus')
+  if ($datas[0] == 'cumulus' and defined('PWG_CUMULUS_PLUGIN_ROOT'))
   {
     include_once PWG_CUMULUS_PLUGIN_ROOT . "/include/pwgCumulusContent.class.php";
     $cumulus = new pwgCumulusContent(get_plugin_data('pwgCumulus'));
