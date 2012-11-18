@@ -2,7 +2,7 @@
 
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 
-global $conf, $template;
+global $conf, $template, $pwg_loaded_plugins;
 
 function counter_compare($a, $b)
 {
@@ -22,6 +22,17 @@ function id_compare($a, $b)
 $pwgCumulus_installed = get_db_plugins('active','pwgCumulus');
 
 $block['TITLE_URL'] = 'tags.php';
+
+// hack typetags
+if (isset($pwg_loaded_plugins['typetags']))
+{
+  $typetags = true;
+  $template->assign('display_mode', $datas[0]);
+  if ($conf['TypeTags']['show_all'])
+  {
+    remove_event_handler('render_tag_name', 'typetags_render', 0);
+  }
+}
 
 $tags = get_available_tags();
 
@@ -137,6 +148,15 @@ else
     include_once PWG_CUMULUS_PLUGIN_ROOT . "/include/pwgCumulusContent.class.php";
     $cumulus = new pwgCumulusContent(get_plugin_data('pwgCumulus'));
     $cumulus->loc_begin_page_header();
+  }
+}
+
+if (isset($typetags))
+{
+  typetags_tags();
+  if ($conf['TypeTags']['show_all'])
+  {
+    add_event_handler('render_tag_name', 'typetags_render', 0);
   }
 }
 
