@@ -4,7 +4,7 @@ if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 
 // Retrieve module data
 $q = ('SELECT * FROM ' . STUFFS_TABLE . ' WHERE id = ' . $_GET['edit'] . ';');
-$module = mysql_fetch_array(pwg_query($q));
+$module = pwg_db_fetch_assoc(pwg_query($q));
 
 $module['users'] = explode(',', $module['users']);
 $module['groups'] = explode(',', $module['groups']);

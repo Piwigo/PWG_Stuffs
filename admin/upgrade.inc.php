@@ -33,7 +33,7 @@ ADD INDEX (on_picture);';
   $result = pwg_query($query);
   
   $modules = array();
-  while ($row = mysql_fetch_assoc($result))
+  while ($row = pwg_db_fetch_assoc($result))
   {
     if ($row['name'] != 'MainBlock')
     {

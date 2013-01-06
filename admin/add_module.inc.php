@@ -67,10 +67,10 @@ WHERE id = ' . $_GET['edit'] . ';');
       else
       {
         $query = 'SELECT IF(MAX(id)+1 IS NULL, 1, MAX(id)+1) AS next_element_id  FROM ' . STUFFS_TABLE . ' ;';
-        list($next_element_id) = mysql_fetch_array(pwg_query($query));
+        list($next_element_id) = pwg_db_fetch_row(pwg_query($query));
 
         $query = 'SELECT MAX(pos)+1 AS next_pos  FROM ' . STUFFS_TABLE . ' ;';
-        list($pos) = mysql_fetch_array(pwg_query($query));
+        list($pos) = pwg_db_fetch_row(pwg_query($query));
 
         $query = '
 INSERT INTO ' . STUFFS_TABLE . ' ( id, pos, name, descr, path, datas, users, groups, level, show_title, on_home, on_root, on_cats, on_picture, id_line, width )

@@ -8,7 +8,7 @@ function plugin_install()
 
   $query = 'SHOW TABLES LIKE "' . $prefixeTable . 'stuffs"';
   $result = pwg_query($query);
-  if (!mysql_fetch_row($result))
+  if (!pwg_db_fetch_row($result))
   {
     $q = 'CREATE TABLE `' . $prefixeTable . 'stuffs` (
 `id` smallint(5) NOT NULL,

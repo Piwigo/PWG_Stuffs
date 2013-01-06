@@ -55,7 +55,7 @@ $id_line_options = array(
     'I' => 'I',
     'J' => 'J');
 
-while ($module = mysql_fetch_assoc($result))
+while ($module = pwg_db_fetch_assoc($result))
 {
   $module['name'] = !empty($module['path']) ? $module['name'] : l10n('stuffs_main_block');
 

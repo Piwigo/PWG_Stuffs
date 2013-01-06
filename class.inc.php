@@ -43,7 +43,7 @@ class stuffs
 
     $query = 'SELECT group_id FROM ' . USER_GROUP_TABLE . ' WHERE user_id = ' . $user['id'] . ';';
     $result = pwg_query($query);
-    while ($row = mysql_fetch_assoc($result))
+    while ($row = pwg_db_fetch_assoc($result))
     {
       array_push($this->user_groups, $row['group_id']);
     }
@@ -70,7 +70,7 @@ ORDER BY pos ASC
 
     $result = pwg_query($query);
 
-    while ($row = mysql_fetch_assoc($result))
+    while ($row = pwg_db_fetch_assoc($result))
     {
       array_push($this->modules, $row);
     }
