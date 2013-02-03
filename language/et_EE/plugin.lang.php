@@ -106,4 +106,5 @@ $lang['stuffs_parent_plugin_is_missing'] = 'Juht plugin ei ole aktiveeritud. Eem
 $lang['stuffs_piclens_need_upgrade'] = 'Piclens plugin peab olema uuendatud. PWG Stuffs ei toimi selle Piclens versiooniga.';
 $lang['stuffs_tags_cumulus'] = 'Kasuta pilve moodust (plugin <a href=http://piwigo.org/ext/extension_view.php?eid=263 target="_blank">Cumulus Tags Cloud</a> peab olema installitud)';
 $lang['stuffs_visual_config'] = 'Näita konfiguratsiooni';
+$lang['module_desc_personal'] = 'Näita personaalset plokki';
 ?>
