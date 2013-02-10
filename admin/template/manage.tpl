@@ -1,5 +1,4 @@
-{html_head}{literal}
-<style type="text/css">
+{html_style}{literal}
 #categoryOrdering li {
   height: 60px;
 }
@@ -7,14 +6,28 @@
   margin-bottom: 0 !important;
   margin-top: 0.5em !important;
 }
-.stuffs_line {
-  margin: 0 10px;
-}
 .MainBlock {
   color: #ff3363;
 }
-</style>
-{/literal}{/html_head}
+.categoryActions {
+  float:right;
+  margin:10px 10px 0 0 !important;
+}
+.categoryActions li {
+  display:inline-block;
+  padding:0 5px;
+  vertical-align:top;
+}
+.moduleDesc {
+  margin-left:30px;
+}
+  .moduleDesc.error {
+    color:red;
+  }
+.albumTitle {
+  margin-left:10px !important;
+}
+{/literal}{/html_style}
 
 {footer_script require='jquery.ui.sortable}
 
@@ -51,13 +64,13 @@ jQuery().ready(function(){
     <li class="categoryLi virtual_cat" id="module_{$module.ID}">
       {if !empty($module.PATH)}
       <ul class="categoryActions">
-        <li class="stuffs_line">
+        <li>
           {'stuffs_id_ligne'|@translate}&nbsp;
           <select name="id_line[{$module.ID}]">
           {html_options options=$module.ID_LINE_OPTIONS selected=$module.ID_LINE_SELECTED}
           </select>
         </li>
-        <li class="stuffs_line">
+        <li>
           {'stuffs_width'|@translate}&nbsp;
           <input type="text" size="2" maxlength="2" value="{$module.WIDTH}" name="width[{$module.ID}]" > %
         </li>
@@ -70,24 +83,24 @@ jQuery().ready(function(){
       </ul>
       {/if}
 
-      <p>
-      <img src="{$themeconf.admin_icon_dir}/cat_move.png" class="button drag_button" style="display:none;" alt="{'Drag to re-order'|@translate}" title="{'Drag to re-order'|@translate}"/>
-      <strong>{if empty($module.PATH)}<span class="MainBlock">{$module.NAME}</span>{else}<a href="{$module.U_EDIT}">{$module.NAME}</a>{/if}</strong>
-      {if !empty($module.TYPE_NAME)}&nbsp;-  &nbsp;{$module.TYPE_NAME}{/if}
+      <p class="albumTitle">
+        <img src="{$themeconf.admin_icon_dir}/cat_move.png" class="button drag_button" style="display:none;" alt="{'Drag to re-order'|@translate}" title="{'Drag to re-order'|@translate}">
+        <strong>{if empty($module.PATH)}<span class="MainBlock">{$module.NAME}</span>{else}<a href="{$module.U_EDIT}">{$module.NAME}</a>{/if}</strong>
+        {if !empty($module.TYPE_NAME)}&nbsp;-&nbsp;{$module.TYPE_NAME}{/if}
       </p>
-
+      
       {if !empty($module.MISSING)}
-        <p style="margin-left: 30px;">{$module.MISSING}</p> 
+        <p class="moduleDesc error">{$module.MISSING}</p> 
       {elseif !empty($module.DESC)}
-        <p style="margin-left: 30px;"><i>{$module.DESC}</i></p>
+        <p class="moduleDesc"><i>{$module.DESC}</i></p>
       {elseif empty($module.PATH)}
-        <p style="margin-left: 30px;"><input name="hidemb" type="checkbox" {if $HIDEMB}checked="checked"{/if}> &nbsp;{'Hide on home page'|@translate}</p>
+        <p class="moduleDesc"><input name="hidemb" type="checkbox" {if $HIDEMB}checked="checked"{/if}> &nbsp;{'Hide on home page'|@translate}</p>
       {/if}
 
       <p class="catPos">
         <label>
-          {'Position'|@translate}
-          <input type="text" size="4" name="position[{$module.ID}]" maxlength="4" value="{$module.POS}" />
+          {'Position'|@translate} :
+          <input type="text" size="4" name="position[{$module.ID}]" maxlength="4" value="{$module.POS}">
         </label>
       </p>
     </li>

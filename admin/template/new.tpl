@@ -10,8 +10,9 @@
     {foreach from=$add_module item=module}
     <li>
       <label>
-        <span class="property">{$module.NAME} <span style="font-weight:normal;">: {$module.DESC}</span></span>
+        <span class="property">{$module.NAME}</span>
         <input type="radio" value="{$module.MODULE_PATH}" name="module"/>
+        <span style="font-weight:normal;">{$module.DESC}</span>
       </label>
     </li>
     {/foreach}
