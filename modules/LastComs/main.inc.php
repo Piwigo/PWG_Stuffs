@@ -212,6 +212,12 @@ SELECT c.id, name, permalink, uppercats, com.id as comment_id
         'image_file' => $elements[$comment['image_id']]['file'],
         )
       );
+      
+    // author
+    if (empty($comment['author']))
+    {
+      $comment['author'] = l10n('guest');
+    }
 
     $tpl_comment = array(
       'ID' => $comment['comment_id'],
@@ -219,67 +225,66 @@ SELECT c.id, name, permalink, uppercats, com.id as comment_id
       'src_image' => $src_image,
       'ALT' => $name,
       'AUTHOR' => trigger_event('render_comment_author', $comment['author']),
-      'DATE'=>format_date($comment['date'], true),
-      'CONTENT'=>trigger_event('render_comment_content',$comment['content']),
+      'DATE' => format_date($comment['date'], true),
+      'CONTENT' => trigger_event('render_comment_content',$comment['content']),
       'WIDTH' => $datas[3],
       'HEIGHT' => $datas[4],
       );
 
-    if (can_manage_comment('delete', $comment['author_id']))
+    if ($datas[1] == 'on')
     {
       $url =
         get_root_url()
         .'index.php'
         .get_query_string_diff(array('edit_comment', 'delete_comment','validate_comment', 'pwg_token'));
-
-      $tpl_comment['U_DELETE'] = add_url_params(
-        $url,
-        array(
-          'delete_comment' => $comment['comment_id'],
-          'pwg_token' => get_pwg_token(),
-          )
-        );
-    }
-
-    if (can_manage_comment('edit', $comment['author_id']))
-    {
-      $url =
-        get_root_url()
-        .'index.php'
-	.get_query_string_diff(array('edit_comment', 'delete_comment','validate_comment', 'pwg_token'));
-
-      $tpl_comment['U_EDIT'] = add_url_params(
-        $url,
-        array(
-          'edit_comment' => $comment['comment_id'],
-          'pwg_token' => get_pwg_token(),
-          )
-        );
-
-      if (isset($edit_comment) and ($comment['comment_id'] == $edit_comment))
+        
+      if (can_manage_comment('delete', $comment['author_id']))
       {
-        $tpl_comment['IN_EDIT'] = true;
-        $key = get_ephemeral_key(2, $comment['image_id']);
-        $tpl_comment['KEY'] = $key;
-        $tpl_comment['IMAGE_ID'] = $comment['image_id'];
-        $tpl_comment['CONTENT'] = $comment['content'];
-        $tpl_comment['PWG_TOKEN'] = get_pwg_token();
-      }
-    }
-
-    if (can_manage_comment('validate', $comment['author_id']))
-    {
-      if ('true' != $comment['validated'])
-      {
-        $tpl_comment['U_VALIDATE'] = add_url_params(
+        $tpl_comment['U_DELETE'] = add_url_params(
           $url,
           array(
-            'validate_comment'=> $comment['comment_id'],
+            'delete_comment' => $comment['comment_id'],
             'pwg_token' => get_pwg_token(),
             )
           );
       }
+
+      if (can_manage_comment('edit', $comment['author_id']))
+      {
+        $tpl_comment['U_EDIT'] = add_url_params(
+          $url,
+          array(
+            'edit_comment' => $comment['comment_id'],
+            'pwg_token' => get_pwg_token(),
+            )
+          );
+
+        if (isset($edit_comment) and ($comment['comment_id'] == $edit_comment))
+        {
+          $tpl_comment['IN_EDIT'] = true;
+          $key = get_ephemeral_key(2, $comment['image_id']);
+          $tpl_comment['KEY'] = $key;
+          $tpl_comment['IMAGE_ID'] = $comment['image_id'];
+          $tpl_comment['CONTENT'] = $comment['content'];
+          $tpl_comment['PWG_TOKEN'] = get_pwg_token();
+        }
+      }
+
+      if (can_manage_comment('validate', $comment['author_id']))
+      {
+        if ('true' != $comment['validated'])
+        {
+          $tpl_comment['U_VALIDATE'] = add_url_params(
+            $url,
+            array(
+              'validate_comment'=> $comment['comment_id'],
+              'pwg_token' => get_pwg_token(),
+              )
+            );
+        }
+      }
     }
+    
     array_push($block['comments'], $tpl_comment);
   }
   $block['derivative_params'] = ImageStdParams::get_by_type(IMG_THUMB);
