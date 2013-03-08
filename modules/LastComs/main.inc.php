@@ -263,6 +263,7 @@ SELECT c.id, name, permalink, uppercats, com.id as comment_id
         $tpl_comment['KEY'] = $key;
         $tpl_comment['IMAGE_ID'] = $comment['image_id'];
         $tpl_comment['CONTENT'] = $comment['content'];
+        $tpl_comment['PWG_TOKEN'] = get_pwg_token();
       }
     }
 
