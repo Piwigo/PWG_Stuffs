@@ -100,4 +100,11 @@ $lang['stuffs_mv_hold_ctrl'] = '按住CTRL鍵，';
 $lang['stuffs_mv_nb_images'] = '圖片顯示的最大數量';
 $lang['stuffs_mv_selected_cats'] = '僅限所選的類別';
 $lang['stuffs_mv_w_thumb'] = '只有帶有縮略圖的類別';
+$lang['stuffs_tags_letters'] = '由字母來群組';
+$lang['stuffs_type'] = '區塊類型';
+$lang['stuffs_unselect_all'] = '取消所有選擇';
+$lang['stuffs_upgrade_message'] = 'PWG Stuffs 插件被重新命名。它現在被稱為"區塊"。';
+$lang['stuffs_user_perm'] = '用戶類型';
+$lang['stuffs_visual_config'] = '顯示設定';
+$lang['stuffs_width'] = '寬度';
 ?>
