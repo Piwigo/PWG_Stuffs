@@ -20,13 +20,13 @@ $lang['Hide on home page'] = 'Скрыть на главной странице'
 
 $lang['stuffs_add_module'] = 'Добавить новый модуль';
 $lang['stuffs_module_config'] = 'Настройки модуля';
-$lang['stuffs_visual_config'] = 'Отображение модуля';
+$lang['stuffs_visual_config'] = 'Отображение настроек';
 $lang['stuffs_module_options'] = 'Опции модуля';
 $lang['stuffs_authorized_group'] = 'Авторизованная группа';
 $lang['stuffs_authorized_users'] = 'Авторизованные пользователи';
 $lang['stuffs_public_module'] = '(Оставьте пустым для открытых модулей)';
 $lang['stuffs_show_title'] = 'Показывать название модуля';
-$lang['stuffs_show_module_on'] = 'Показывать блок :';
+$lang['stuffs_show_module_on'] = 'Показывать блок:';
 $lang['stuffs_show_on_home'] = 'На главной странице';
 $lang['stuffs_show_on_root'] = 'На странице категории';
 $lang['stuffs_show_on_cats'] = 'На всех страницах этой категории';
@@ -49,7 +49,7 @@ $lang['stuffs_upgrade_message'] = 'Плагин PWG Stuffs был переиме
 $lang['stuffs_error_no_mod_selected'] = 'Вы не выбрали ни один модуль.';
 $lang['stuffs_no_name'] = 'Вы должны определить название модуля';
 $lang['stuffs_parent_plugin_is_missing'] = 'Основной плагин не активирован. Вы должны удалить этот модуль и реактивировать основной плагин.';
-$lang['stuffs_piclens_need_upgrade'] = 'Плагин PICLENS нужно актуализировать. Плагин PWG Stuffs не работает с этой версией Piclens.';
+$lang['stuffs_piclens_need_upgrade'] = 'Плагин PICLENS нужно обновить. Плагин PWG Stuffs не работает с этой версией Piclens.';
 
 //------------------------------------------------------------------------------
 //              Module LastComs
@@ -120,7 +120,7 @@ $lang['stuffs_mv_hold_ctrl'] = 'удерживайте CTRL';
 //------------------------------------------------------------------------------
 
 $lang['module_name_bestrated'] = 'Самые высокооцененные';
-$lang['module_desc_bestrated'] = 'Показать x самых высокооцененных фотографий в галерее или категорииDisplay x best rated';
+$lang['module_desc_bestrated'] = 'Показать x самых высокооцененных фотографий в галерее или категории';
 
 //------------------------------------------------------------------------------
 //              Module Recent
