@@ -29,4 +29,15 @@ $lang['lastcoms_height'] = 'حداکثر ارتفاع';
 $lang['lastcoms_width'] = 'حداکثر عرض';
 $lang['module_Citation_code'] = 'کد مشابه';
 $lang['module_Citation_lang'] = 'زبان';
+$lang['lastcoms_show_buttons'] = 'نمایش دکمه ای مدیر ';
+$lang['lastcoms_taille_cadres'] = 'فرم بزرگ تر';
+$lang['logon_remove_menubar_block'] = 'پاکردن اتصال سریع از بولک اعضا';
+$lang['module_desc_citation'] = 'نمایش نقل قول اتفاقی';
+$lang['module_desc_logon'] = 'نمایش بلوک ورود';
+$lang['module_desc_personal'] = 'نمایش بلوک شخصی (لینک هر ویرایشگر)';
+$lang['module_desc_tags'] = 'نمایش تگ های گالری';
+$lang['module_name_bestrated'] = 'بهترین رده';
+$lang['module_name_citation'] = 'نقل قول اتفاقی';
+$lang['module_name_logon'] = 'ورود';
+$lang['module_name_mostvisited'] = 'بشترین بازدید';
 ?>
