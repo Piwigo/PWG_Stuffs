@@ -40,4 +40,14 @@ $lang['module_name_bestrated'] = 'بهترین رده';
 $lang['module_name_citation'] = 'نقل قول اتفاقی';
 $lang['module_name_logon'] = 'ورود';
 $lang['module_name_mostvisited'] = 'بشترین بازدید';
+$lang['stuffs_edit_mod'] = 'ویرایش گروه';
+$lang['stuffs_group_perm'] = 'قدرت گرفته با گروه';
+$lang['stuffs_id_ligne'] = 'ای دی خط';
+$lang['module_name_tags'] = 'برچسب';
+$lang['personal_content'] = 'محتوا';
+$lang['stuffs_add_mod'] = 'افزودن بلوک';
+$lang['stuffs_confirm_delete'] = 'ایا مطئنید که میخواهید بلوک %s ؟ را حذف کنید';
+$lang['stuffs_add_module'] = 'افزودن بلوک جدید';
+$lang['stuffs_authorized_group'] = 'مجوزهای گروه';
+$lang['stuffs_authorized_users'] = 'مجوزهای اعشا';
 ?>
