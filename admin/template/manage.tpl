@@ -29,7 +29,7 @@
 }
 {/literal}{/html_style}
 
-{footer_script require='jquery.ui.sortable}
+{footer_script require="jquery.ui.sortable"}
 
 {literal}
 jQuery().ready(function(){
@@ -41,10 +41,10 @@ jQuery().ready(function(){
     opacity: 0.8
   });
   jQuery("#categoryOrdering").submit(function(){
-    ar = jQuery('.categoryUl').sortable('toArray');
+    ar = jQuery(".categoryUl").sortable("toArray");
     for(i=0;i<ar.length;i++) {
-      module = ar[i].split('module_');
-      document.getElementsByName('position[' + module[1] + ']')[0].value = i;
+      module = ar[i].split("module_");
+      document.getElementsByName("position[" + module[1] + "]")[0].value = i;
     }
   });
 });
@@ -65,26 +65,26 @@ jQuery().ready(function(){
       {if !empty($module.PATH)}
       <ul class="categoryActions">
         <li>
-          {'stuffs_id_ligne'|@translate}&nbsp;
+          {"stuffs_id_ligne"|@translate}&nbsp;
           <select name="id_line[{$module.ID}]">
           {html_options options=$module.ID_LINE_OPTIONS selected=$module.ID_LINE_SELECTED}
           </select>
         </li>
         <li>
-          {'stuffs_width'|@translate}&nbsp;
+          {"stuffs_width"|@translate}&nbsp;
           <input type="text" size="2" maxlength="2" value="{$module.WIDTH}" name="width[{$module.ID}]" > %
         </li>
         {if empty($module.MISSING)}
-        <li><a href="{$module.U_EDIT}" title="{'stuffs_edit'|@translate}"><img src="{$themeconf.admin_icon_dir}/category_edit.png" class="button" alt="{'stuffs_edit'|@translate}"/></a></li>
+        <li><a href="{$module.U_EDIT}" title="{"stuffs_edit"|@translate}"><img src="{$themeconf.admin_icon_dir}/category_edit.png" class="button" alt="{"stuffs_edit"|@translate}"/></a></li>
         {/if}
-        {if !empty($module.U_DELETE) }
-        <li><a href="{$module.U_DELETE}" title="{'stuffs_delete'|@translate}" onclick="return confirm('{'Are you sure?'|@translate|@escape:javascript}');"><img src="{$themeconf.admin_icon_dir}/category_delete.png" class="button" alt="{'stuffs_delete'|@translate}" /></a></li>
+        {if !empty($module.U_DELETE)}
+        <li><a href="{$module.U_DELETE}" title="{"stuffs_delete"|@translate}" onclick="return confirm("{"Are you sure?"|@translate|@escape:javascript}");"><img src="{$themeconf.admin_icon_dir}/category_delete.png" class="button" alt="{"stuffs_delete"|@translate}" /></a></li>
         {/if}
       </ul>
       {/if}
 
       <p class="albumTitle">
-        <img src="{$themeconf.admin_icon_dir}/cat_move.png" class="button drag_button" style="display:none;" alt="{'Drag to re-order'|@translate}" title="{'Drag to re-order'|@translate}">
+        <img src="{$themeconf.admin_icon_dir}/cat_move.png" class="button drag_button" style="display:none;" alt="{"Drag to re-order"|@translate}" title="{"Drag to re-order"|@translate}">
         <strong>{if empty($module.PATH)}<span class="MainBlock">{$module.NAME}</span>{else}<a href="{$module.U_EDIT}">{$module.NAME}</a>{/if}</strong>
         {if !empty($module.TYPE_NAME)}&nbsp;-&nbsp;{$module.TYPE_NAME}{/if}
       </p>
@@ -94,12 +94,12 @@ jQuery().ready(function(){
       {elseif !empty($module.DESC)}
         <p class="moduleDesc"><i>{$module.DESC}</i></p>
       {elseif empty($module.PATH)}
-        <p class="moduleDesc"><input name="hidemb" type="checkbox" {if $HIDEMB}checked="checked"{/if}> &nbsp;{'Hide on home page'|@translate}</p>
+        <p class="moduleDesc"><input name="hidemb" type="checkbox" {if $HIDEMB}checked="checked"{/if}> &nbsp;{"Hide on home page"|@translate}</p>
       {/if}
 
       <p class="catPos">
         <label>
-          {'Position'|@translate} :
+          {"Position"|@translate} :
           <input type="text" size="4" name="position[{$module.ID}]" maxlength="4" value="{$module.POS}">
         </label>
       </p>
@@ -109,6 +109,6 @@ jQuery().ready(function(){
 
   <p style="text-align: center;">
   <br />
-    <input class="submit" name="submitOrder" type="submit" value="{'Save order'|@translate}" />
+    <input class="submit" name="submitOrder" type="submit" value="{"Save order"|@translate}" />
   </p>
 </form>
