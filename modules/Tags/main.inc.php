@@ -2,7 +2,7 @@
 
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 
-global $conf, $template, $pwg_loaded_plugins;
+global $conf, $template, $pwg_loaded_plugins, $tags, $page;;
 
 function counter_compare($a, $b)
 {
@@ -26,8 +26,6 @@ $block['TITLE_URL'] = 'tags.php';
 // hack typetags
 if (isset($pwg_loaded_plugins['typetags']))
 {
-  $typetags = true;
-  $template->assign('display_mode', $datas[0]);
   if ($conf['TypeTags']['show_all'])
   {
     remove_event_handler('render_tag_name', 'typetags_render', 0);
@@ -151,12 +149,14 @@ else
   }
 }
 
-if (isset($typetags))
+if (isset($pwg_loaded_plugins['typetags']))
 {
+  $page['display_mode'] = $datas[0];
   typetags_tags();
+
   if ($conf['TypeTags']['show_all'])
   {
-    add_event_handler('render_tag_name', 'typetags_render', 0);
+    add_event_handler('render_tag_name', 'typetags_render', 0, 2);
   }
 }
 
