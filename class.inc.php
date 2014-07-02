@@ -110,7 +110,7 @@ ORDER BY pos ASC
         $block['ID'] = $module['id'];
         if ($module['show_title'] == 'true')
         {
-          $block['TITLE'] = trigger_event('render_stuffs_name', $module['name']);
+          $block['TITLE'] = trigger_change('render_stuffs_name', $module['name']);
         }
         if (is_admin())
         {

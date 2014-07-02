@@ -12,7 +12,7 @@ $module['groups'] = explode(',', $module['groups']);
 $datas = (!empty($module['datas']) ? unserialize($module['datas']) : false);
 
 $template->assign(array(
-  'STUFFS_TITLE' => l10n('stuffs_edit_mod') . ' <i>' . trigger_event('render_stuffs_name', $module['name']) . '</i>',
+  'STUFFS_TITLE' => l10n('stuffs_edit_mod') . ' <i>' . trigger_change('render_stuffs_name', $module['name']) . '</i>',
   'MODULE_NAME' => $module['name'],
   'DESC_VALUE' => (isset($module['descr']) ? $module['descr'] : ''),
   'show_title_CHECKED' => ($module['show_title'] == 'true'),

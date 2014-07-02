@@ -75,7 +75,7 @@ while ($module = pwg_db_fetch_assoc($result))
 
   $template->append('modules', array(
     'ID' => $module['id'],
-    'NAME' => trigger_event('render_stuffs_name', $module['name']),
+    'NAME' => trigger_change('render_stuffs_name', $module['name']),
     'DESC' => $module['descr'],
     'PATH' => $module['path'],
     'TYPE_NAME' => (isset($modules[$module['path']]['name']) ? $modules[$module['path']]['name'] : ''),

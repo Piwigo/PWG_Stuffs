@@ -34,7 +34,7 @@ $tabsheet->assign();
 
 //Récupération des modules disponibles
 add_event_handler('get_stuffs_modules', 'get_default_stuffs_modules');
-$disp_modules = trigger_event('get_stuffs_modules', array());
+$disp_modules = trigger_change('get_stuffs_modules', array());
 uasort($disp_modules, 'name_compare');
 
 $modules = array();

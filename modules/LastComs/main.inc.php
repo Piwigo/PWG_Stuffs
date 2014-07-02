@@ -224,9 +224,9 @@ SELECT c.id, name, permalink, uppercats, com.id as comment_id
       'U_PICTURE' => $url,
       'src_image' => $src_image,
       'ALT' => $name,
-      'AUTHOR' => trigger_event('render_comment_author', $comment['author']),
+      'AUTHOR' => trigger_change('render_comment_author', $comment['author']),
       'DATE' => format_date($comment['date'], true),
-      'CONTENT' => trigger_event('render_comment_content',$comment['content']),
+      'CONTENT' => trigger_change('render_comment_content',$comment['content']),
       'WIDTH' => $datas[3],
       'HEIGHT' => $datas[4],
       );
