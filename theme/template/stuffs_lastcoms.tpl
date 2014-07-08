@@ -2,13 +2,13 @@
 {html_head}
 <style type="text/css">
 {if !empty($block.MAX_WIDTH)}
-#comments img {ldelim} max-width:{$block.MAX_WIDTH}px; }
+.stuffs #comments img {ldelim} max-width:{$block.MAX_WIDTH}px; }
 {/if}
 {if !empty($block.MAX_HEIGHT)}
-#comments img {ldelim} max-height:{$block.MAX_HEIGHT}px; }
+.stuffs #comments img {ldelim} max-height:{$block.MAX_HEIGHT}px; }
 {/if}
 {if !empty($block.NB_COMMENTS_LINE)}
-#comments li {ldelim} width:{$block.NB_COMMENTS_LINE} !important; }
+.stuffs #comments li {ldelim} width:{$block.NB_COMMENTS_LINE} !important; }
 {/if}
 </style>
 {/html_head}
