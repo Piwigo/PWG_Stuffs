@@ -79,7 +79,7 @@ ORDER BY pos ASC
   /* Process modules */
   function process_modules()
   {
-    global $pwg_loaded_plugins, $conf;
+    global $pwg_loaded_plugins, $conf, $user;
 
     foreach ($this->modules as $module)
     {
@@ -87,7 +87,7 @@ ORDER BY pos ASC
       {
         $this->pos = 'end';
         $show = unserialize($module['datas']);
-        if (!$show and empty($conf['AP']['homepage']))
+        if (!$show and empty($conf['AP']['homepage']) and strpos($user['theme'], 'simple') !== 0)
         {
           add_event_handler('loc_end_index', 'hide_main_block');
         }
