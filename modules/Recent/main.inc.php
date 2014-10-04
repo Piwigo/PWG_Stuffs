@@ -30,9 +30,16 @@ $query ='
 SELECT DISTINCT(i.id)
   FROM '.IMAGES_TABLE.' AS i
     INNER JOIN '.IMAGE_CATEGORY_TABLE.' AS ic ON i.id = ic.image_id
-    INNER JOIN '.CATEGORIES_TABLE.' AS c ON ic.category_id = c.id
-  WHERE i.date_available >= SUBDATE(
-      CURRENT_DATE,INTERVAL '.$user['recent_period'].' DAY)';
+    INNER JOIN '.CATEGORIES_TABLE.' AS c ON ic.category_id = c.id';
+
+if (!isset($datas['recent_period_only']) or
+    $datas['recent_period_only'])
+{
+  $query .= '
+        WHERE i.date_available >= SUBDATE(
+      CURRENT_DATE,INTERVAL '.$user['recent_period'].' DAY)
+  ';
+}
 
 if (isset($page['category']))
 {

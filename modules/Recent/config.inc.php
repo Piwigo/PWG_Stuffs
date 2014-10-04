@@ -5,6 +5,7 @@ if (!isset($datas))
 {
   $datas = array(
     'nb_images'     => 10,
+    'recent_period_only' => true,
     'cat_display'   => 'all',
     'cat_selection' => array(),
   );
@@ -15,6 +16,7 @@ if (isset($_POST['submit']))
 {
   $datas = array(
     'nb_images' => intval($_POST['nb_images']),
+    'recent_period_only' => !empty($_POST['recent_period_only']),
     'cat_display' => $_POST['cat_display'],
     'cat_selection' => @$_POST['cat_selection'],
     );
@@ -27,6 +29,7 @@ display_select_cat_wrapper($query,array(),'category_selection');
 
 $template->assign(array(
   'NB_IMAGES' => $datas['nb_images'],
+  'RECENT_PERIOD_ONLY' => $datas['recent_period_only'],
   'cat_display' => $datas['cat_display'],
   'category_selected' => $datas['cat_selection'],
   )
