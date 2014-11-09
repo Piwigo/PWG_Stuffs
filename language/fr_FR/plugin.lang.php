@@ -59,7 +59,7 @@ $lang['module_name_lastcoms'] = 'Derniers commentaires';
 $lang['module_desc_lastcoms'] = 'Affiche les derniers commentaires postés';
 
 $lang['lastcoms_no_nb_comments'] = 'Vous devez renseigner le champ "Nombre de commentaires à afficher".';
-$lang['lastcoms_config'] = 'Configuration';
+$lang['lastcoms_config'] = 'Configuration 2';
 $lang['lastcoms_nb_comments'] = 'Nombre de commentaires à afficher';
 $lang['lastcoms_show_buttons'] = 'Afficher les boutons admin';
 $lang['lastcoms_dim'] = 'Dimension des miniatures';
@@ -151,5 +151,3 @@ $lang['module_Citation_code'] = 'Code associé';
 
 $lang['module_name_featuredphotos'] = 'Images du jour';
 $lang['module_desc_featuredphotos'] = 'Affiche les images favorites du webmaster';
-
-?>
