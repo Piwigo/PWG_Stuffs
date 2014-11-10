@@ -106,6 +106,7 @@ $lang['module_name_mostvisited'] = 'Plus vues';
 $lang['module_desc_mostvisited'] = 'Affiche les x images les plus vues de la galerie ou de la catégorie';
 
 $lang['stuffs_mv_nb_images'] = 'Nombre maximum d\'images à afficher';
+$lang['stuffs_mv_recent_period_only'] = 'N\'afficher que les photos de la période récente';
 $lang['stuffs_mv_category_display'] = 'Affichage sur les pages des catégories';
 $lang['stuffs_mv_all_cats'] = 'Toutes les catégories';
 $lang['stuffs_mv_w_thumb'] = 'Catégories avec miniatures uniquement';

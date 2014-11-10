@@ -5,6 +5,10 @@
 		<td align="right"><br>{'stuffs_mv_nb_images'|@translate} &nbsp;&nbsp;</td>
 		<td><br><input type="text" name="nb_images" size="3" maxlength="2" value="{$NB_IMAGES}"></td>
 	</tr>
+	<tr>
+		<td align="right"><br>{'stuffs_mv_recent_period_only'|@translate} &nbsp;&nbsp;</td>
+		<td><br><input type="checkbox" name="recent_period_only" {if $RECENT_PERIOD_ONLY}checked="checked"{/if}></td>
+	</tr>
 	<tr class="cat_options" style="display: none;">
 		<td align="right"><br>{'stuffs_mv_category_display'|@translate} &nbsp;&nbsp;</td>
 		<td><br>
