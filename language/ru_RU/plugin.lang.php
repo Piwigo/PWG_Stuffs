@@ -152,4 +152,4 @@ $lang['module_Citation_code'] = 'Код';
 $lang['module_name_featuredphotos'] = 'Избранные фотографии';
 $lang['module_desc_featuredphotos'] = 'Показать любимые фотографии вебмастера';
 
-?>
+$lang['stuffs_mv_recent_period_only'] = 'Показывать изображения только за последний период';
