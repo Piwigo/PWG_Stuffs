@@ -107,4 +107,4 @@ $lang['module_desc_lastcoms'] = 'Vis de seneste kommentarer';
 $lang['module_desc_logon'] = 'Vis loginblok';
 $lang['module_desc_mostvisited'] = 'Vis x mest sete billeder i galleriet eller et album';
 $lang['module_desc_personal'] = 'Vis personlig blok (som en editor)';
-?>
+$lang['stuffs_mv_recent_period_only'] = 'Vis kun billeder fra nylig periode';
