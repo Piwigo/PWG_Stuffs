@@ -107,4 +107,4 @@ $lang['module_desc_lastcoms'] = 'Mostra último comentário publicado';
 $lang['module_desc_logon'] = 'Mostra bloco de login';
 $lang['module_desc_mostvisited'] = 'Mostra x fotos mais visitadas na galeria ou numa categoria';
 $lang['module_desc_personal'] = 'Mostra blocos pessoais (como um editor)';
-?>
+$lang['stuffs_mv_recent_period_only'] = 'Apenas mostrar imagens do período recente';
