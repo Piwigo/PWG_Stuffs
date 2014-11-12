@@ -152,4 +152,4 @@ $lang['module_Citation_code'] = 'Dazugehöriger Code';
 $lang['module_name_featuredphotos'] = 'Ausgewählte Fotos';
 $lang['module_desc_featuredphotos'] = 'Lieblingsbilder des Webmasters anzeigen';
 
-?>
+$lang['stuffs_mv_recent_period_only'] = 'Zeigt nur aktuelle Bilder';
