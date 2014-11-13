@@ -22,8 +22,8 @@
 /*TODO*/$lang['stuffs_module_config'] = 'Block configuration';
 /*TODO*/$lang['stuffs_visual_config'] = 'Display configuration';
 /*TODO*/$lang['stuffs_module_options'] = 'Block options';
-/*TODO*/$lang['stuffs_authorized_group'] = 'Authorized groups';
-/*TODO*/$lang['stuffs_authorized_users'] = 'Authorized users';
+$lang['stuffs_authorized_group'] = '認証済みグループ';
+$lang['stuffs_authorized_users'] = '認証済みユーザ';
 /*TODO*/$lang['stuffs_public_module'] = '(Keep empty for public block)';
 /*TODO*/$lang['stuffs_show_title'] = 'Show block title';
 /*TODO*/$lang['stuffs_show_module_on'] = 'Show block :';
@@ -131,14 +131,14 @@ $lang['module_desc_bestrated'] = 'ギャラリまたはカテゴリで最高評�
 //------------------------------------------------------------------------------
 
 $lang['module_name_recent'] = '最近の写真';
-$lang['module_desc_recent'] = '存在する場合、ギャラリまたはカテゴリ内の最近の写真 x 件を表示する';
+$lang['module_desc_recent'] = 'ギャラリまたはアルバム内の最近の写真 x 件を表示する（あれば）';
 
 //------------------------------------------------------------------------------
 //              Module Random
 //------------------------------------------------------------------------------
 
 $lang['module_name_random'] = 'ランダム写真';
-$lang['module_desc_random'] = 'ギャラリまたはカテゴリ内にランダム写真 x件を表示する';
+$lang['module_desc_random'] = 'ギャラリまたはアルバム内の写真をランダムに x件を表示する';
 
 //------------------------------------------------------------------------------
 //              Module Citation
@@ -156,4 +156,4 @@ $lang['module_Citation_code'] = '関連コード';
 $lang['module_name_featuredphotos'] = '特集写真';
 $lang['module_desc_featuredphotos'] = 'ウェブマスタのお気に入り写真を表示する';
 
-?>
+$lang['stuffs_mv_recent_period_only'] = '最近の写真のみ表示する';
