@@ -152,4 +152,4 @@ $lang['module_Citation_code'] = '相关代码';
 $lang['module_name_featuredphotos'] = '推荐图片';
 $lang['module_desc_featuredphotos'] = '显示网站管理员收藏的图片';
 
-?>
+$lang['stuffs_mv_recent_period_only'] = '只显示最近的图片';
