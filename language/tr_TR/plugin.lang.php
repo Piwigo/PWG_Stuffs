@@ -156,4 +156,4 @@ $lang['module_Citation_code'] = 'İlgili Kod';
 $lang['module_name_featuredphotos'] = 'Öne çıkan resimler';
 $lang['module_desc_featuredphotos'] = 'Site yöneticisinin favori resimlerini göster';
 
-?>
+$lang['stuffs_mv_recent_period_only'] = 'Sadece son zamanlardaki resimleri göster';
