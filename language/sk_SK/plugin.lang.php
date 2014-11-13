@@ -152,4 +152,4 @@ $lang['module_Citation_code'] = 'Súvisiaci kód';
 $lang['module_name_featuredphotos'] = 'Hlavné fotografie';
 $lang['module_desc_featuredphotos'] = 'Zobraziť obľúbené fotografie webmastera';
 
-?>
+$lang['stuffs_mv_recent_period_only'] = 'Zobraziť len fotky z nedávnej doby';
