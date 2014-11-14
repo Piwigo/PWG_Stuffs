@@ -152,4 +152,4 @@ $lang['module_Citation_code'] = 'Código asociado';
 $lang['module_name_featuredphotos'] = 'Imágenes de día';
 $lang['module_desc_featuredphotos'] = 'Fija las imágenes favoritas del webmaster';
 
-?>
+$lang['stuffs_mv_recent_period_only'] = 'Solo mostrar imágenes de periodos recientes ';
