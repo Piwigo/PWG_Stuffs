@@ -107,4 +107,4 @@ $lang['stuffs_upgrade_message'] = 'PWG Stuffs плаґін був перейме
 $lang['stuffs_user_perm'] = 'за типами користувачів';
 $lang['stuffs_visual_config'] = 'Відображення конфігурації';
 $lang['stuffs_width'] = 'Ширина';
-?>
+$lang['stuffs_mv_recent_period_only'] = 'ПОказувати зображення тільки за недавній період';
