@@ -1,55 +1,55 @@
 <?php
 
-/*TODO*/$lang['stuffs_mods_management'] = 'Blocks management';
-/*TODO*/$lang['stuffs_add_mod'] = 'Add a block';
-/*TODO*/$lang['stuffs_edit_mod'] = 'Edit block';
+$lang['stuffs_mods_management'] = 'ブロックの管理';
+$lang['stuffs_add_mod'] = 'ブロックを追加する';
+$lang['stuffs_edit_mod'] = 'ブロックを編集';
 
-/*TODO*/$lang['stuffs_module_title'] = 'Block title';
-/*TODO*/$lang['stuffs_desc'] = 'Description';
-/*TODO*/$lang['stuffs_only_for_admin'] = '(only for administration pannel)';
-/*TODO*/$lang['stuffs_type'] = 'Block type';
-/*TODO*/$lang['stuffs_position'] = 'Position';
-/*TODO*/$lang['stuffs_id_ligne'] = 'ID line';
-/*TODO*/$lang['stuffs_width'] = 'Width';
-/*TODO*/$lang['stuffs_action'] = 'Actions';
-/*TODO*/$lang['stuffs_edit'] = 'Modify block';
-/*TODO*/$lang['stuffs_delete'] = 'Delete block';
-/*TODO*/$lang['stuffs_confirm_delete'] = 'Are you sure you want to delete block %s?';
-/*TODO*/$lang['stuffs_main_block'] = 'Main block';
+$lang['stuffs_module_title'] = 'ブロックのタイトル';
+$lang['stuffs_desc'] = '概要';
+$lang['stuffs_only_for_admin'] = '(管理者用パネルのみ)';
+$lang['stuffs_type'] = 'ブロックタイプ';
+$lang['stuffs_position'] = '位置';
+$lang['stuffs_id_ligne'] = 'ID ライン';
+$lang['stuffs_width'] = '幅';
+$lang['stuffs_action'] = 'アクション';
+$lang['stuffs_edit'] = 'ブロックを変更';
+$lang['stuffs_delete'] = 'ブロックを削除';
+$lang['stuffs_confirm_delete'] = 'ブロック %sを削除してもよろしいでしょうか？';
+$lang['stuffs_main_block'] = 'メインブロック';
 /*TODO*/$lang['Hide on home page'] = 'Hide on home page';
 
-/*TODO*/$lang['stuffs_add_module'] = 'Add new block';
-/*TODO*/$lang['stuffs_module_config'] = 'Block configuration';
-/*TODO*/$lang['stuffs_visual_config'] = 'Display configuration';
-/*TODO*/$lang['stuffs_module_options'] = 'Block options';
+$lang['stuffs_add_module'] = '新規ブロックを追加する';
+$lang['stuffs_module_config'] = 'ブロックの設定';
+$lang['stuffs_visual_config'] = '設定の表示';
+$lang['stuffs_module_options'] = 'ブロックのオプション';
 $lang['stuffs_authorized_group'] = '認証済みグループ';
 $lang['stuffs_authorized_users'] = '認証済みユーザ';
-/*TODO*/$lang['stuffs_public_module'] = '(Keep empty for public block)';
-/*TODO*/$lang['stuffs_show_title'] = 'Show block title';
-/*TODO*/$lang['stuffs_show_module_on'] = 'Show block :';
-/*TODO*/$lang['stuffs_show_on_home'] = 'On main page';
-/*TODO*/$lang['stuffs_show_on_root'] = 'On categories root page';
-/*TODO*/$lang['stuffs_show_on_cats'] = 'On all categories pages';
-/*TODO*/$lang['stuffs_show_on_picture'] = 'On picture pages';
-/*TODO*/$lang['stuffs_no_options'] = 'No options for this block';
+$lang['stuffs_public_module'] = '(パブリックブロックは、空のままとする)';
+$lang['stuffs_show_title'] = 'ブロックタイトルを表示';
+$lang['stuffs_show_module_on'] = '表示するブロック :';
+$lang['stuffs_show_on_home'] = 'メインページに';
+$lang['stuffs_show_on_root'] = '（親子関係の）トップのカテゴリページに';
+$lang['stuffs_show_on_cats'] = '全てのカテゴリページに';
+$lang['stuffs_show_on_picture'] = '写真ページに';
+$lang['stuffs_no_options'] = 'このブロックにはオプションがありません';
 
 /*TODO*/$lang['stuffs_perm'] = 'Activate authorization management:';
-/*TODO*/$lang['stuffs_group_perm'] = 'by groups';
-/*TODO*/$lang['stuffs_user_perm'] = 'by user type';
-/*TODO*/$lang['stuffs_level_perm'] = 'by privacy level';
+$lang['stuffs_group_perm'] = 'グループで';
+$lang['stuffs_user_perm'] = 'ユーザ種別で';
+$lang['stuffs_level_perm'] = 'プライバシーレベルで';
 
-/*TODO*/$lang['stuffs_select_all'] = 'Select all';
-/*TODO*/$lang['stuffs_unselect_all'] = 'Unselect all';
+$lang['stuffs_select_all'] = '全てを選択';
+$lang['stuffs_unselect_all'] = '全てを非選択に';
 
 // Infos messages
-/*TODO*/$lang['stuffs_order_saved'] = 'Order successfully saved.';
-/*TODO*/$lang['stuffs_upgrade_message'] = 'PWG Stuffs plugin as been renamed. It is now called "Blocks".';
+$lang['stuffs_order_saved'] = '順番が保存されました。';
+$lang['stuffs_upgrade_message'] = 'PWG Stuffs プラグインは、名前が変わりました。現在の名前は、"Blocks"です。';
 
 // Errors messages
-/*TODO*/$lang['stuffs_error_no_mod_selected'] = 'You didn\'t select any block.';
-/*TODO*/$lang['stuffs_no_name'] = 'You must specify block\'s name';
-/*TODO*/$lang['stuffs_parent_plugin_is_missing'] = 'PARENT PLUGIN IS NOT ACTIVATED. You should remove this block or re-activate parent plugin.';
-/*TODO*/$lang['stuffs_piclens_need_upgrade'] = 'PICLENS PLUGIN MUST BE UPDATED. PWG Stuffs is not compatible with this version of Piclens.';
+$lang['stuffs_error_no_mod_selected'] = 'あなたは、どのブロックも選択できません。';
+$lang['stuffs_no_name'] = 'ブロックの名前を指定して下さい';
+$lang['stuffs_parent_plugin_is_missing'] = 'parentプラグインが有効かされていません。このブロックを削除するか、parentプラグインを再度　有効化して下さい。';
+$lang['stuffs_piclens_need_upgrade'] = 'piclensプラグインを更新する必要があります。PWG Stuffは、現在のバージョンのPiclensと互換性がありません。';
 
 //------------------------------------------------------------------------------
 //              Module LastComs
