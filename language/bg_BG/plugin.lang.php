@@ -107,4 +107,4 @@ $lang['module_desc_lastcoms'] = 'Покажи последно публикув�
 $lang['module_Citation_lang'] = 'Език';
 $lang['logon_remove_menubar_block'] = 'Премахни "Quick connect" от менюто';
 $lang['lastcoms_width'] = 'Максимална ширина';
-?>
+$lang['stuffs_mv_recent_period_only'] = 'Показване на снимки само от последния период';
