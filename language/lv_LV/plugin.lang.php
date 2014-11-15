@@ -156,4 +156,4 @@ $lang['module_Citation_code'] = 'Saistītais kods';
 $lang['module_name_featuredphotos'] = 'Raksturīgie attēli';
 $lang['module_desc_featuredphotos'] = 'Rādīt webmāstera mīļākos attēlus';
 
-?>
+$lang['stuffs_mv_recent_period_only'] = 'Rāda tikai tekošā perioda attēlus';
