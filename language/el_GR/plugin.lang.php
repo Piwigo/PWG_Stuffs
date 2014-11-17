@@ -107,4 +107,4 @@ $lang['stuffs_tags_cloud'] = 'Σύννεφο Ετικετών';
 $lang['stuffs_tags_cumulus'] = 'Χρησιμοποιήστε λειτουργία Cumulus <a href=http://piwigo.org/ext/extension_view.php?eid=263target="_blank">Cumulus Tags Cloud</a> πρέπει να είναι εγκατεστημένο';
 $lang['stuffs_tags_default_display'] = 'Εμφάνιση Ετικετών';
 $lang['stuffs_tags_letters'] = 'Αλφαβητική Ομαδοποίηση';
-?>
+$lang['stuffs_mv_recent_period_only'] = 'Προβολή μόνο εικόνων από την πρόσφατη περίοδο.';
