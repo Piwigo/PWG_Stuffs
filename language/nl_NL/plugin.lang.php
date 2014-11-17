@@ -152,4 +152,4 @@ $lang['module_Citation_code'] = 'Gerelateerde code';
 
 $lang['module_name_featuredphotos'] = 'Uitgelichte afbeeldingen';
 $lang['module_desc_featuredphotos'] = 'Toon de favoriete afbeeldingen van de beheerder';
-?>
+$lang['stuffs_mv_recent_period_only'] = 'Laat alleen recente afbeeldingen zien';
