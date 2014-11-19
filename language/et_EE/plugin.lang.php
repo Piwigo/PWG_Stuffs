@@ -107,4 +107,4 @@ $lang['stuffs_piclens_need_upgrade'] = 'Piclens plugin peab olema uuendatud. PWG
 $lang['stuffs_tags_cumulus'] = 'Kasuta pilve moodust (plugin <a href=http://piwigo.org/ext/extension_view.php?eid=263 target="_blank">Cumulus Tags Cloud</a> peab olema installitud)';
 $lang['stuffs_visual_config'] = 'Näita konfiguratsiooni';
 $lang['module_desc_personal'] = 'Näita personaalset plokki';
-?>
+$lang['stuffs_mv_recent_period_only'] = 'Näita ainult viimase perioodi pilte';
