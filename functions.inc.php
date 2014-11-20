@@ -46,12 +46,11 @@ function get_default_stuffs_modules($modules)
       $path = STUFFS_PATH . 'modules/' . $file;
       if (is_dir($path) and !is_link($path))
       {
-        array_push($modules, array(
+        $modules[] = array(
           'path' => $path,
           'name' => l10n('module_name_' . strtolower($file)),
           'description' => l10n('module_desc_' . strtolower($file)),
-          )
-        );
+          );
       }
     }
   }
