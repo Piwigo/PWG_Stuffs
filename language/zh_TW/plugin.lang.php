@@ -107,4 +107,4 @@ $lang['stuffs_upgrade_message'] = 'PWG Stuffs 插件被重新命名。它現在�
 $lang['stuffs_user_perm'] = '用戶類型';
 $lang['stuffs_visual_config'] = '顯示設定';
 $lang['stuffs_width'] = '寬度';
-?>
+$lang['stuffs_mv_recent_period_only'] = '只顯示最近一段時期的圖像';
