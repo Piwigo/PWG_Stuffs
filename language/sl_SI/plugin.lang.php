@@ -107,4 +107,4 @@ $lang['module_desc_featuredphotos'] = 'Prikaži priljubljene slike skrbnika';
 $lang['module_desc_lastcoms'] = 'Prikaži zadnje objavljene komentarje';
 $lang['module_desc_logon'] = 'Prikaži prijavni sklop';
 $lang['module_desc_mostvisited'] = 'Prikaži x največkrat ogledanih slik v galeriji ali kategoriji';
-?>
+$lang['stuffs_mv_recent_period_only'] = 'Prikaži le nedavne fotografije';
