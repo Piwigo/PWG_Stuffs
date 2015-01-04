@@ -107,4 +107,4 @@ $lang['stuffs_show_on_root'] = 'Sur la radika kategorio-paĝo';
 $lang['stuffs_show_title'] = 'Montri la blokan titolon';
 $lang['stuffs_tags_cloud'] = 'Nubo da etikedoj';
 $lang['stuffs_tags_default_display'] = 'Vidigo de etikedoj';
-?>
+$lang['stuffs_mv_recent_period_only'] = 'Nur vidigi bildojn el freŝa periodo';
