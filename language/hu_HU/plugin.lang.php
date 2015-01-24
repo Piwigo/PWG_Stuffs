@@ -152,4 +152,4 @@ $lang['module_Citation_code'] = 'Kapcsolódó kód';
 $lang['module_name_featuredphotos'] = 'Aktuális képek';
 $lang['module_desc_featuredphotos'] = 'Jelenjenek meg a webmester kedvenc képei';
 
-?>
+$lang['stuffs_mv_recent_period_only'] = 'Csak a közeli időszakból mutass képeket';
