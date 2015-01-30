@@ -156,4 +156,4 @@ $lang['module_Citation_code'] = 'Relaterad kod';
 $lang['module_name_featuredphotos'] = 'Bilder i rampljuset';
 $lang['module_desc_featuredphotos'] = 'Visa webmasterns favorit bilder';
 
-?>
+$lang['stuffs_mv_recent_period_only'] = 'Visa enbart bilder från den senaste perioden';
