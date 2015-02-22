@@ -107,3 +107,4 @@ $lang['stuffs_id_ligne'] = 'ID-ul liniei';
 $lang['stuffs_tags_cloud'] = 'Norul de tag-uri';
 $lang['stuffs_tags_cumulus'] = 'Folosește modul cumulus (plugin <a href=http://piwigo.org/ext/extension_view.php?eid=263 target="_blank">Cumulus Tags Cloud</a> trebuie sa fie instalat)';
 $lang['stuffs_upgrade_message'] = 'Pluginul PWG Stuffs a fost redenumit. Acum se numeste "Blocks".';
+$lang['stuffs_mv_recent_period_only'] = 'Afiseaza doar imaginile recente.';
