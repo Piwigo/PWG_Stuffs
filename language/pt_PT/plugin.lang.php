@@ -157,4 +157,4 @@ $lang['module_name_featuredphotos'] = 'Fotos em Destaque';
 $lang['module_desc_featuredphotos'] = 'Mostrar as fotos favoritas do webmaster';
 
 
-?>
+$lang['stuffs_mv_recent_period_only'] = 'Apenas apresenta imagens do período recente';
