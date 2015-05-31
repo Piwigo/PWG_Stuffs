@@ -155,4 +155,4 @@ $lang['module_Citation_code'] = 'Powiązany kod'; //* to fix *//
 $lang['module_name_featuredphotos'] = 'Doskonałe obrazy'; //* to fix *//
 $lang['module_desc_featuredphotos'] = 'Wyświetl ulubione obrazki administratora strony';
 
-?>
+$lang['stuffs_mv_recent_period_only'] = 'Wyświetlaj tylko zdjęcia z ostatniego okresu';
