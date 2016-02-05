@@ -137,4 +137,4 @@ $lang['stuffs_unselect_all'] = 'Deselecciona-ho tot';
 $lang['stuffs_upgrade_message'] = 'El complement PWG Stuffs s\'ha canviat el nom. Ara es diu "blocs".';
 $lang['stuffs_user_perm'] = 'per tipus d\'usuari';
 $lang['stuffs_visual_config'] = 'Visualitzar la configuració';
-?>
+$lang['stuffs_mv_recent_period_only'] = 'Només mostra imatges recents';
