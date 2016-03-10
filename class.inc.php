@@ -10,7 +10,7 @@ class stuffs
   var $pos = 'begin';
   var $prefixe = 'PLUGIN_INDEX_CONTENT_';
 
-  function stuffs()
+  function __construct()
   {
     global $page, $template;
 
