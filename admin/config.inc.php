@@ -20,7 +20,7 @@ if (isset($_POST['submit']))
   }
   if ($conf['Stuffs']['group_perm'] and !isset($_POST['group_perm']))
   {
-    pwg_query('UPDATE '.STUFFS_TABLE.' SET groups = NULL;');
+    pwg_query('UPDATE '.STUFFS_TABLE.' SET `groups` = NULL;');
   }
   if ($conf['Stuffs']['level_perm'] and !isset($_POST['level_perm']))
   {
