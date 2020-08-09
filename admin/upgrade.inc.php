@@ -15,7 +15,7 @@ MODIFY COLUMN type VARCHAR(255) CHARACTER SET utf8 NOT NULL,
 MODIFY COLUMN params VARCHAR(255) CHARACTER SET utf8 default NULL,
 MODIFY COLUMN datas LONGTEXT CHARACTER SET utf8 default NULL,
 MODIFY COLUMN users VARCHAR(255) CHARACTER SET utf8 default NULL,
-MODIFY COLUMN groups VARCHAR(255) CHARACTER SET utf8 default NULL,
+MODIFY COLUMN `groups` VARCHAR(255) CHARACTER SET utf8 default NULL,
 DEFAULT CHARACTER SET utf8,
 ADD show_title ENUM(\'true\',\'false\') NOT NULL,
 ADD on_home ENUM(\'true\',\'false\') NOT NULL,
@@ -157,7 +157,7 @@ WHERE users <> "guest,generic,normal,admin,webmaster"
 
   $query = 'SELECT id
 FROM '.STUFFS_TABLE.'
-WHERE groups IS NOT NULL
+WHERE `groups` IS NOT NULL
 ;';
   $ids = array_from_query($query, 'id');
   $conf['Stuffs']['group_perm'] = !empty($ids);
