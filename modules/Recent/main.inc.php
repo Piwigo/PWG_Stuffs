@@ -57,7 +57,7 @@ $query .= '
 $page['items'] = array_from_query($query, 'id');
 $page['start'] = 0;
 $page['nb_image_page'] = $datas['nb_images'];
-$page['section'] = 'category';
+$page['section'] = 'recent_pics';
 
 $tpl_thumbnails_var = array();
 $pwg_stuffs_tpl_thumbnails_var = & $tpl_thumbnails_var;
