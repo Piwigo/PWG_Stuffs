@@ -1,3 +1,5 @@
+{combine_css path="plugins/PWG_Stuffs/admin/stuffs_admin.css"}
+
 {html_style}{literal}
 #categoryOrdering li {
   height: 60px;

@@ -1,0 +1,29 @@
+/* copied from Piwigo 2.10, because removed on Piwigo 11 */
+
+UL.categoryUl {
+    list-style: none;
+    padding: 0;
+    margin: 1em;
+}
+
+#categoryOrdering li {
+    height: 60px;
+}
+LI.categoryLi {
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.categoryLi, .menuLi {
+    background: #F3F3F3;
+}
+
+FORM#categoryOrdering p {
+    text-align: left;
+}
+
+FORM#categoryOrdering p.albumTitle {
+  padding: 0;
+  font-size: 14px;
+  color: #777;
+  font-weight: normal;
+}

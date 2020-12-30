@@ -6,6 +6,7 @@ Description: Insert modules on your gallery
 Plugin URI: http://piwigo.org/ext/extension_view.php?eid=190
 Author: P@t
 Author URI: http://www.gauchon.com
+Has Settings: true
 */
 
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
@@ -26,18 +27,6 @@ define('STUFFS_TABLE' , $prefixeTable . 'stuffs');
 // Need upgrade?
 if ($conf['Stuffs'] === false)
   include('admin/upgrade.inc.php');
-
-function stuffs_admin_menu($menu)
-{
-  global $conf;
-
-  array_push($menu, array(
-    'NAME' => 'PWG Stuffs',
-    'URL' => get_root_url().'admin.php?page=plugin-'.STUFFS_DIR
-    )
-  );
-  return $menu;
-}
 
 function load_stuffs()
 {
@@ -94,7 +83,6 @@ function stuffs_section_init()
   add_event_handler('loc_begin_picture', 'load_stuffs');
 }
 
-add_event_handler('get_admin_plugin_menu_links', 'stuffs_admin_menu');
 add_event_handler('loc_end_section_init', 'stuffs_section_init', 60);
 
 ?>
