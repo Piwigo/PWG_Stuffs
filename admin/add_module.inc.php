@@ -51,7 +51,7 @@ SET name ="' . $module_name . '",
     descr=' . $desc . ',
     datas=' . $sav_datas . ',
     users=' . $users . ',
-    groups=' . $groups . ',
+    `groups`=' . $groups . ',
     level=' . $level . ',
     show_title=' . $show_title .',
     on_home=' . $on_home .',
@@ -73,7 +73,7 @@ WHERE id = ' . $_GET['edit'] . ';');
         list($pos) = pwg_db_fetch_row(pwg_query($query));
 
         $query = '
-INSERT INTO ' . STUFFS_TABLE . ' ( id, pos, name, descr, path, datas, users, groups, level, show_title, on_home, on_root, on_cats, on_picture, id_line, width )
+INSERT INTO ' . STUFFS_TABLE . ' ( id, pos, name, descr, path, datas, users, `groups`, level, show_title, on_home, on_root, on_cats, on_picture, id_line, width )
 VALUES (' . $next_element_id . ' ,
   ' . $pos . ',
   "' . $module_name . '",

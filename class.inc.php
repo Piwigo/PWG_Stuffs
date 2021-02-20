@@ -57,12 +57,12 @@ class stuffs
     if (!isset($page['stuffs_section'])) return;
 
     $query = '
-SELECT DISTINCT id, name, path, datas, groups, show_title, id_line, width
+SELECT DISTINCT id, name, path, datas, `groups`, show_title, id_line, width
 FROM ' . STUFFS_TABLE . '
 LEFT JOIN ' . USER_GROUP_TABLE . '
   ON user_id = '.$user['id'].'
 WHERE (users IS NULL OR users LIKE "%' . $user['status'] . '%")
-  AND (groups IS NULL OR groups REGEXP CONCAT("(^|,)",group_id,"(,|$)"))
+  AND (`groups` IS NULL OR `groups` REGEXP CONCAT("(^|,)",group_id,"(,|$)"))
   AND level <= '.$user['level'].'
   AND '.$page['stuffs_section'].' = "true"
 ORDER BY pos ASC
