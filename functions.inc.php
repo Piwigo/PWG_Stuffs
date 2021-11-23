@@ -17,7 +17,7 @@ if (!function_exists('get_user_language_desc'))
     
     if (substr_count(strtolower($desc), '[lang=' . $user_lang . ']'))
     {
-      // la balise avec la langue de l'utilisateur a été trouvée
+      // la balise avec la langue de l'utilisateur a ï¿½tï¿½ trouvï¿½e
       $patterns[] = '#(^|\[/lang\])(.*?)(\[lang=(' . $user_lang . '|all)\]|$)#is';
       $replacements[] = '';
       $patterns[] = '#\[lang=(' . $user_lang . '|all)\](.*?)\[/lang\]#is';
@@ -25,7 +25,7 @@ if (!function_exists('get_user_language_desc'))
     }
     else
     {
-      // la balise avec la langue de l'utilisateur n'a pas été trouvée
+      // la balise avec la langue de l'utilisateur n'a pas ï¿½tï¿½ trouvï¿½e
       // On prend tout ce qui est hors balise
       $patterns[] = '#\[lang=all\](.*?)\[/lang\]#is';
       $replacements[] = '\\1';
@@ -144,7 +144,7 @@ function hide_main_block()
   }
 }
 
-function hide_main_block_prefilter($content, $smarty)
+function hide_main_block_prefilter($content)
 {
   return preg_replace('#(?:<div id="content"|<div id="subcontent").*</div>[ \{\*]*<!-- (?:sub|)content -->[ \*\}]*#si', '', $content);
 }
