@@ -1,0 +1,96 @@
+<?php
+// +-----------------------------------------------------------------------+
+// | This file is part of Piwigo.                                          |
+// |                                                                       |
+// | For copyright and license information, please view the COPYING.txt    |
+// | file that was distributed with this source code.                      |
+// +-----------------------------------------------------------------------+
+$lang['stuffs_tags_default_display'] = 'Merkjabirting';
+$lang['stuffs_tags_letters'] = 'Flokkaðu eftir bókstöfum';
+$lang['stuffs_type'] = 'Blokkargerð';
+$lang['stuffs_unselect_all'] = 'Afvelja allt';
+$lang['stuffs_upgrade_message'] = 'PWG Stuffs viðbótin hefur verið endurnefnd. Hún er nú nefnd "Blocks".';
+$lang['stuffs_user_perm'] = 'eftir notendategund';
+$lang['stuffs_visual_config'] = 'Sýna uppsetningu';
+$lang['stuffs_width'] = 'Breidd';
+$lang['stuffs_mv_w_thumb'] = 'Aðeins flokkar með smámyndum';
+$lang['stuffs_mv_wo_thumb'] = 'Aðeins flokkar án smámynda';
+$lang['stuffs_no_name'] = 'Þú verður að tilgreina blokkarheitið';
+$lang['stuffs_no_options'] = 'Engir valmöguleikar fyrir þessa blokk';
+$lang['stuffs_only_for_admin'] = '(aðeins fyrir stjórnborð)';
+$lang['stuffs_order_saved'] = 'Tókst að vista röðun';
+$lang['stuffs_parent_plugin_is_missing'] = 'FORELDRAVIÐBÓT ER EKKI VIRK. Þú ættir að fjarlægja þessa blokk eða endurvirkja foreldraviðbót.';
+$lang['stuffs_perm'] = 'Virkjaðu heimildastjórnun:';
+$lang['stuffs_piclens_need_upgrade'] = 'PICLENS VIÐBÓT ÞARF AÐ UPPFÆRA. PWG Stuffs er ekki samhæft við þessa útgáfu af Piclens.';
+$lang['stuffs_position'] = 'Staða';
+$lang['stuffs_public_module'] = '(Haltu tómu fyrir almenna blokk)';
+$lang['stuffs_select_all'] = 'Velja allt';
+$lang['stuffs_show_module_on'] = 'Sýna blokk:';
+$lang['stuffs_show_on_cats'] = 'Á öllum flokkasíðum';
+$lang['stuffs_show_on_home'] = 'Á aðalsíðu';
+$lang['stuffs_show_on_picture'] = 'Á myndasíðum';
+$lang['stuffs_show_on_root'] = 'Á rótarsíðu flokka';
+$lang['stuffs_show_title'] = 'Sýna blokkartitil';
+$lang['stuffs_tags_cloud'] = 'Merkjaský';
+$lang['stuffs_tags_cumulus'] = 'Notið cumulus ham (plugin <a href=http://piwigo.org/ext/extension_view.php?eid=263 target="_blank">Cumulus Merkjaský</a> verður að uppsett)
+';
+$lang['stuffs_delete'] = 'Eyða blokk';
+$lang['stuffs_desc'] = 'Lýsing';
+$lang['stuffs_edit'] = 'Breyta blokk';
+$lang['stuffs_edit_mod'] = 'Breyta blokk';
+$lang['stuffs_error_no_mod_selected'] = 'Þú valdir enga blokk';
+$lang['stuffs_group_perm'] = 'eftir hópum';
+$lang['stuffs_id_ligne'] = 'Auðkennislína';
+$lang['stuffs_level_perm'] = 'eftir friðhelgisstigi';
+$lang['stuffs_main_block'] = 'Aðalblokk';
+$lang['stuffs_mods_management'] = 'Blokkstjórnun';
+$lang['stuffs_module_config'] = 'Blokkuppsetning';
+$lang['stuffs_module_options'] = 'Blokkmöguleikar';
+$lang['stuffs_module_title'] = 'Blokktitill';
+$lang['stuffs_mv_all_cats'] = 'Allir flokkar';
+$lang['stuffs_mv_cat_selection'] = 'Flokkaval';
+$lang['stuffs_mv_category_display'] = 'Birta á flokkasíðum';
+$lang['stuffs_mv_hold_ctrl'] = 'halda niðri CTRL';
+$lang['stuffs_mv_nb_images'] = 'Hámarksfjöldi mynda að birta';
+$lang['stuffs_mv_recent_period_only'] = 'Birta aðeins myndir frá nýliðnu tímabili';
+$lang['stuffs_mv_selected_cats'] = 'Aðeins valdir flokkar';
+$lang['module_desc_random'] = 'Birta x handahófskenndar myndir í galleríinu eða flokki';
+$lang['module_desc_recent'] = 'Birta x nýlegar myndir í galleríinu eða flokki (ef til er)';
+$lang['module_desc_tags'] = 'Birta merki gallerís';
+$lang['module_name_bestrated'] = 'Best metið';
+$lang['module_name_citation'] = 'Handahófskennd tilvitnun';
+$lang['module_name_featuredphotos'] = 'Valdar myndir';
+$lang['module_name_lastcoms'] = 'Síðustu umsagnir';
+$lang['module_name_logon'] = 'Innskráning';
+$lang['module_name_mostvisited'] = 'Mest heimsótt';
+$lang['module_name_personal'] = 'Persónuleg blokk';
+$lang['module_name_random'] = 'Handahófskenndar myndir';
+$lang['module_name_recent'] = 'Nýjustu myndir';
+$lang['module_name_tags'] = 'Merki';
+$lang['personal_content'] = 'innihald';
+$lang['stuffs_action'] = 'Aðgerðir';
+$lang['stuffs_add_mod'] = 'Bæta við blokk';
+$lang['stuffs_add_module'] = 'Bæta við nýrri blokk';
+$lang['stuffs_authorized_group'] = 'Heimilaðir hópar';
+$lang['stuffs_authorized_users'] = 'Heimilaðir notendur';
+$lang['stuffs_confirm_delete'] = 'Ertu viss um að þú viljir eyða blokk %s?';
+$lang['Hide on home page'] = 'Fela á forsíðu';
+$lang['lastcoms_config'] = 'Uppsetning';
+$lang['lastcoms_dim'] = 'Stærð smámynda';
+$lang['lastcoms_height'] = 'Hámarks hæð';
+$lang['lastcoms_nb_cadres'] = 'Fjöldi ramma á línu';
+$lang['lastcoms_nb_comments'] = 'Fjöldi umsagna að birta';
+$lang['lastcoms_no_nb_comments'] = 'Þú verður að tilgreina fjölda umsagna.';
+$lang['lastcoms_show_buttons'] = 'Sýna stjórnunarhnappa';
+$lang['lastcoms_taille_cadres'] = 'Rammahæð';
+$lang['lastcoms_width'] = 'Hámarks breidd';
+$lang['logon_remove_menubar_block'] = 'Fjarlægðu „Skynditengingu“ blokkina af valmyndastikunni';
+$lang['module_Citation_code'] = 'Tengdur kóði';
+$lang['module_Citation_lang'] = 'Tungumál';
+$lang['module_desc_bestrated'] = 'Birta x myndir með bestu einkunn í myndasafni eða flokki';
+$lang['module_desc_citation'] = 'Birta tilvitnun tilviljunarkennt';
+$lang['module_desc_featuredphotos'] = 'Birta uppáhaldsmyndir vefstjóra';
+$lang['module_desc_lastcoms'] = 'Birta síðustu umsagnir';
+$lang['module_desc_logon'] = 'Birta innskráningarblokk';
+$lang['module_desc_mostvisited'] = 'Birta x mest heimsóttu myndirnar í myndasafninu eða flokki';
+$lang['module_desc_personal'] = 'Birta persónulegablokk (eins og ritstjóra)';
