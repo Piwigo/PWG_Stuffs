@@ -6,8 +6,8 @@ if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 $q = ('SELECT * FROM ' . STUFFS_TABLE . ' WHERE id = ' . $_GET['edit'] . ';');
 $module = pwg_db_fetch_assoc(pwg_query($q));
 
-$module['users'] = explode(',', $module['users']);
-$module['groups'] = explode(',', $module['groups']);
+$module['users'] = explode(',', ''.$module['users']);
+$module['groups'] = explode(',', ''.$module['groups']);
 
 $datas = (!empty($module['datas']) ? unserialize($module['datas']) : false);
 

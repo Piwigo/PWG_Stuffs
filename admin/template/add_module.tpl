@@ -26,7 +26,7 @@
       <span class="property">
         <label for="module_desc">{'stuffs_desc'|@translate}<br>&nbsp;</label>
       </span>
-      <input type="text" maxlength="255" value="{$DESC_VALUE}" name="module_desc" id="module_desc" style="width:500px;"/><br><i>{'stuffs_only_for_admin'|@translate}</i>
+      <input type="text" maxlength="255" {if isset ($DESC_VALUE)}value="{$DESC_VALUE}"{/if} name="module_desc" id="module_desc" style="width:500px;"/><br><i>{'stuffs_only_for_admin'|@translate}</i>
     </li>
     <li>
       <span class="property">
