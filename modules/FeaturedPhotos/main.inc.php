@@ -29,7 +29,7 @@ SELECT DISTINCT(i.id)
 
 $page['items'] = array_from_query($query, 'id');
 $page['start'] = 0;
-$page['nb_image_page'] = $datas['nb_images'];
+$page['nb_image_page'] = isset($datas['nb_images']) ? $datas['nb_images'] : 0;
 $page['section'] = 'category';
 
 $tpl_thumbnails_var = array();
